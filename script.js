@@ -30,15 +30,38 @@ let pantallaActual = 0;
  * @param {number} n - Índice de la pantalla destino
  */
 function irA(n) {
-  if (n !== 0) {
-    mostrarConstruccion();
-    return;
-  }
+  // if (n !== 0) {
+  //   mostrarConstruccion();
+  //   return;
+  // }
+  detenerVideoModulo(pantallaActual);
   document.getElementById(PANTALLAS[pantallaActual]).classList.remove("activa");
   pantallaActual = n;
   document.getElementById(PANTALLAS[n]).classList.add("activa");
   window.scrollTo({ top: 0, behavior: "smooth" });
   cerrarMenu();
+  reproducirVideoModulo(n);
+}
+
+let videoTimer = null;
+
+function reproducirVideoModulo(n) {
+  const videos = { 2: "video-m1", 3: "video-m2", 4: "video-m3" };
+  if (!videos[n]) return;
+  const video = document.getElementById(videos[n]);
+  if (!video) return;
+  videoTimer = setTimeout(() => video.play().catch(() => {}), 1500);
+}
+
+function detenerVideoModulo(n) {
+  clearTimeout(videoTimer);
+  videoTimer = null;
+  const videos = { 2: "video-m1", 3: "video-m2", 4: "video-m3" };
+  if (!videos[n]) return;
+  const video = document.getElementById(videos[n]);
+  if (!video) return;
+  video.pause();
+  video.currentTime = 0;
 }
 
 function mostrarConstruccion() {

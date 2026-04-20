@@ -1253,8 +1253,46 @@ body {
     text-align: center;
 }
 
+
+/* ── LAYOUT MÓDULO 1 ── */
+.m1-layout {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 24px;
+    align-items: start;
+}
+
+.m1-contenido {
+    min-width: 0;
+}
+
+.m1-video-col {
+    position: sticky;
+    top: 80px;
+}
+
+.m1-layout-invertido {
+    grid-template-columns: 240px 1fr;
+}
+
+/* ── VIDEO DE MÓDULO ── */
+.modulo-video {
+    width: 100%;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+@media (max-width: 700px) {
+    .m1-layout {
+        grid-template-columns: 1fr;
+    }
+    .m1-video-col {
+        position: static;
+    }
+}
+
 /* ── MODAL EN CONSTRUCCIÓN ── */
-.construccion-panel {
+/* .construccion-panel {
     background: var(--blanco);
     border-radius: var(--radio);
     padding: 40px 32px;
@@ -1262,7 +1300,7 @@ body {
     max-width: 400px;
     text-align: center;
     animation: fadeIn 0.25s ease;
-}
+} */
 
 .construccion-icono {
     font-size: 36px;

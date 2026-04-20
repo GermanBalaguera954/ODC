@@ -256,90 +256,91 @@
         <h2 class="modulo-titulo">Contexto y problemática</h2>
       </div>
 
-      <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
-        </div>
-        <div>
-          <div class="avatar-nombre">ALDO · Módulo 1</div>
-          <div class="avatar-texto">
-            ¿Sabías que en Colombia uno de cada cuatro estudiantes universitarios no se gradúa?
-            En esta sección vamos a dimensionar el problema con datos reales del SPADIES.
-            Observa las cifras y luego responde la actividad.
-          </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p2')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~75 seg · Archivo: audio/p2.mp3</span>
-          </div>
-        </div>
-      </div>
+      <div class="m1-layout">
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-num">24,15%</div>
-          <div class="stat-label">Deserción acumulada por cohorte — SPADIES 2023</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">8,97%</div>
-          <div class="stat-label">Tasa de deserción anual en Colombia</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">1 de 4</div>
-          <div class="stat-label">Estudiantes que ingresan y no culminan sus estudios</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-titulo">¿Qué dice la evidencia?</div>
-        <p>En Colombia, aproximadamente uno de cada cuatro estudiantes que ingresa a la educación superior no culmina
-          sus estudios. Este fenómeno representa una pérdida significativa de capital humano y oportunidades de
-          desarrollo social. Las causas son múltiples: factores económicos, académicos, psicosociales y geográficos se
-          combinan de manera diferente en cada estudiante.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-titulo">Más información</div>
-        <div class="info-chips">
-          <div class="info-chip">¿Qué es SPADIES?
-            <div class="chip-tooltip">Sistema para la Prevención y Análisis de la Deserción en Instituciones de
-              Educación Superior del Ministerio de Educación Nacional de Colombia.</div>
+        <!-- Columna izquierda: contenido -->
+        <div class="m1-contenido">
+          <div class="avatar-box">
+            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div>
+              <div class="avatar-nombre">ALDO · Módulo 1</div>
+              <div class="avatar-texto">
+                ¿Sabías que en Colombia uno de cada cuatro estudiantes universitarios no se gradúa?
+                En esta sección vamos a dimensionar el problema con datos reales del SPADIES.
+                Observa las cifras y luego responde la actividad.
+              </div>
+            </div>
           </div>
-          <div class="info-chip">¿Qué es deserción acumulada?
-            <div class="chip-tooltip">Porcentaje de estudiantes de una cohorte que abandona antes de graduarse,
-              calculado al finalizar el programa académico.</div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-num">24,15%</div>
+              <div class="stat-label">Deserción acumulada por cohorte — SPADIES 2023</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">8,97%</div>
+              <div class="stat-label">Tasa de deserción anual en Colombia</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">1 de 4</div>
+              <div class="stat-label">Estudiantes que ingresan y no culminan sus estudios</div>
+            </div>
           </div>
-          <div class="info-chip">¿Qué es cohorte?
-            <div class="chip-tooltip">Grupo de estudiantes que ingresan al mismo tiempo a un programa académico en una
-              institución.</div>
+
+          <div class="card">
+            <div class="card-titulo">¿Qué dice la evidencia?</div>
+            <p>En Colombia, aproximadamente uno de cada cuatro estudiantes que ingresa a la educación superior no culmina
+              sus estudios. Este fenómeno representa una pérdida significativa de capital humano y oportunidades de
+              desarrollo social. Las causas son múltiples: factores económicos, académicos, psicosociales y geográficos se
+              combinan de manera diferente en cada estudiante.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-titulo">Más información</div>
+            <div class="info-chips">
+              <div class="info-chip">¿Qué es SPADIES?
+                <div class="chip-tooltip">Sistema para la Prevención y Análisis de la Deserción en Instituciones de
+                  Educación Superior del Ministerio de Educación Nacional de Colombia.</div>
+              </div>
+              <div class="info-chip">¿Qué es deserción acumulada?
+                <div class="chip-tooltip">Porcentaje de estudiantes de una cohorte que abandona antes de graduarse,
+                  calculado al finalizar el programa académico.</div>
+              </div>
+              <div class="info-chip">¿Qué es cohorte?
+                <div class="chip-tooltip">Grupo de estudiantes que ingresan al mismo tiempo a un programa académico en una
+                  institución.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="actividad-box">
+            <div class="actividad-titulo">Actividad · Verdadero o Falso</div>
+            <div id="vf-m1-q1">
+              <div class="pregunta">1. En Colombia, 1 de cada 4 estudiantes universitarios abandona sus estudios antes de
+                graduarse.</div>
+              <div class="opciones-vf">
+                <button type="button" class="btn-opcion" onclick="verificarVF('vf-m1-q1','V','V')">Verdadero</button>
+                <button type="button" class="btn-opcion" onclick="verificarVF('vf-m1-q1','F','V')">Falso</button>
+              </div>
+              <div class="retro" id="retro-vf-m1-q1"></div>
+            </div>
+            <div id="vf-m1-q2" class="vf-pregunta-siguiente">
+              <div class="pregunta">2. La deserción universitaria afecta por igual a todas las regiones y modalidades
+                educativas de Colombia.</div>
+              <div class="opciones-vf">
+                <button type="button" class="btn-opcion" onclick="verificarVF('vf-m1-q2','V','F')">Verdadero</button>
+                <button type="button" class="btn-opcion" onclick="verificarVF('vf-m1-q2','F','F')">Falso</button>
+              </div>
+              <div class="retro" id="retro-vf-m1-q2"></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="actividad-box">
-        <div class="actividad-titulo">Actividad · Verdadero o Falso</div>
-
-        <div id="vf-m1-q1">
-          <div class="pregunta">1. En Colombia, 1 de cada 4 estudiantes universitarios abandona sus estudios antes de
-            graduarse.</div>
-          <div class="opciones-vf">
-            <button class="btn-opcion" onclick="verificarVF('vf-m1-q1','V','V')">Verdadero</button>
-            <button class="btn-opcion" onclick="verificarVF('vf-m1-q1','F','V')">Falso</button>
-          </div>
-          <div class="retro" id="retro-vf-m1-q1"></div>
+        <!-- Columna derecha: video fijo -->
+        <div class="m1-video-col">
+          <video id="video-m1" class="modulo-video" src="modulo1.mp4" controls></video>
         </div>
 
-        <div id="vf-m1-q2" class="vf-pregunta-siguiente">
-          <div class="pregunta">2. La deserción universitaria afecta por igual a todas las regiones y modalidades
-            educativas de Colombia.</div>
-          <div class="opciones-vf">
-            <button class="btn-opcion" onclick="verificarVF('vf-m1-q2','V','F')">Verdadero</button>
-            <button class="btn-opcion" onclick="verificarVF('vf-m1-q2','F','F')">Falso</button>
-          </div>
-          <div class="retro" id="retro-vf-m1-q2"></div>
-        </div>
       </div>
 
     </div>
@@ -369,47 +370,50 @@
         <h2 class="modulo-titulo">Deserción en Colombia</h2>
       </div>
 
-      <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
-        </div>
-        <div>
-          <div class="avatar-nombre">ALDO · Módulo 2</div>
-          <div class="avatar-texto">
-            La deserción no afecta a todos por igual. El primer semestre es el período más crítico.
-            Vamos a ver qué factores aumentan el riesgo y por qué actuar temprano marca la diferencia.
-          </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p3')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~70 seg · Archivo: audio/p3.mp3</span>
-          </div>
-        </div>
-      </div>
+      <div class="m1-layout">
 
-      <div class="card">
-        <div class="card-titulo">¿Qué dice la investigación?</div>
-        <p>Guerrero y Espejo (2024) evidencian que los estudiantes de estratos bajos presentan tasas de abandono
-          considerablemente más altas. En programas virtuales en zonas rurales, Aparicio-Gómez et al. (2021) reportaron
-          tasas aún más elevadas por conectividad limitada y aislamiento geográfico. Acero et al. (2019) demostraron que
-          el rendimiento en el primer semestre es el predictor más fuerte de deserción futura.</p>
-      </div>
+        <!-- Columna izquierda: contenido -->
+        <div class="m1-contenido">
+          <div class="avatar-box">
+            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div>
+              <div class="avatar-nombre">ALDO · Módulo 2</div>
+              <div class="avatar-texto">
+                La deserción no afecta a todos por igual. El primer semestre es el período más crítico.
+                Vamos a ver qué factores aumentan el riesgo y por qué actuar temprano marca la diferencia.
+              </div>
+            </div>
+          </div>
 
-      <div class="actividad-box">
-        <div class="actividad-titulo">Actividad · Ordenar factores por nivel de riesgo</div>
-        <p class="actividad-instruccion">
-          Arrastra los factores para ordenarlos de <strong>mayor a menor riesgo</strong> según la evidencia científica.
-        </p>
-        <div id="drag-lista">
-          <div class="drag-item" draggable="true" data-id="1">Factores psicosociales y familiares</div>
-          <div class="drag-item" draggable="true" data-id="2">Estrato socioeconómico bajo</div>
-          <div class="drag-item" draggable="true" data-id="3">Modalidad virtual en zona rural</div>
-          <div class="drag-item" draggable="true" data-id="4">Bajo rendimiento en primer semestre</div>
+          <div class="card">
+            <div class="card-titulo">¿Qué dice la investigación?</div>
+            <p>Guerrero y Espejo (2024) evidencian que los estudiantes de estratos bajos presentan tasas de abandono
+              considerablemente más altas. En programas virtuales en zonas rurales, Aparicio-Gómez et al. (2021) reportaron
+              tasas aún más elevadas por conectividad limitada y aislamiento geográfico. Acero et al. (2019) demostraron que
+              el rendimiento en el primer semestre es el predictor más fuerte de deserción futura.</p>
+          </div>
+
+          <div class="actividad-box">
+            <div class="actividad-titulo">Actividad · Ordenar factores por nivel de riesgo</div>
+            <p class="actividad-instruccion">
+              Arrastra los factores para ordenarlos de <strong>mayor a menor riesgo</strong> según la evidencia científica.
+            </p>
+            <div id="drag-lista">
+              <div class="drag-item" draggable="true" data-id="1">Factores psicosociales y familiares</div>
+              <div class="drag-item" draggable="true" data-id="2">Estrato socioeconómico bajo</div>
+              <div class="drag-item" draggable="true" data-id="3">Modalidad virtual en zona rural</div>
+              <div class="drag-item" draggable="true" data-id="4">Bajo rendimiento en primer semestre</div>
+            </div>
+            <button type="button" class="btn-verificar btn-verificar-orden" onclick="verificarOrden()">Verificar orden</button>
+            <div class="retro" id="retro-orden"></div>
+          </div>
         </div>
-        <button class="btn-verificar btn-verificar-orden" onclick="verificarOrden()">Verificar orden</button>
-        <div class="retro" id="retro-orden"></div>
+
+        <!-- Columna derecha: video fijo -->
+        <div class="m1-video-col">
+          <video id="video-m2" class="modulo-video" src="modulo2.mp4" controls></video>
+        </div>
+
       </div>
 
     </div>
@@ -439,71 +443,67 @@
         <h2 class="modulo-titulo">Factores de riesgo</h2>
       </div>
 
-      <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
-        </div>
-        <div>
-          <div class="avatar-nombre">ALDO · Módulo 3</div>
-          <div class="avatar-texto">
-            Los factores de riesgo se agrupan en tres grandes categorías. La clave está en combinarlas:
-            un modelo que solo mira notas pierde la mitad del panorama. Clasifica los factores en la actividad.
-          </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p4')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~80 seg · Archivo: audio/p4.mp3</span>
-          </div>
-        </div>
-      </div>
+      <div class="m1-layout m1-layout-invertido">
 
-      <div class="card">
-        <div class="card-titulo">Tres categorías de factores</div>
-        <p>Los <strong>factores académicos</strong> incluyen rendimiento, asistencia y materias reprobadas. Los
-          <strong>factores socioeconómicos</strong> comprenden estrato, necesidad de trabajar y acceso a internet. Los
-          <strong>factores psicosociales</strong> abarcan apoyo familiar, motivación y salud mental. Chalela-Naffah et
-          al. (2020) demostraron que los factores psicosociales son determinantes críticos, especialmente en poblaciones
-          vulnerables.</p>
-      </div>
-
-      <div class="actividad-box">
-        <div class="actividad-titulo">Actividad · Clasificar factores de riesgo</div>
-        <p class="actividad-instruccion">Arrastra cada factor a su categoría correcta.</p>
-
-        <div class="drag-container">
-          <div class="drag-col" id="col-academico" ondragover="allowDrop(event)" ondrop="dropFactor(event,'academico')">
-            <div class="drag-col-titulo">Académico</div>
-          </div>
-          <div class="drag-col" id="col-socioeconomico" ondragover="allowDrop(event)"
-            ondrop="dropFactor(event,'socioeconomico')">
-            <div class="drag-col-titulo">Socioeconómico</div>
-          </div>
-          <div class="drag-col" id="col-psicosocial" ondragover="allowDrop(event)"
-            ondrop="dropFactor(event,'psicosocial')">
-            <div class="drag-col-titulo">Psicosocial</div>
-          </div>
+        <!-- Columna izquierda: video fijo -->
+        <div class="m1-video-col">
+          <video id="video-m3" class="modulo-video" src="modulo3.mp4" controls></video>
         </div>
 
-        <div id="factores-pool">
-          <div class="drag-item" draggable="true" data-cat="academico" ondragstart="dragFactor(event)">Nota parcial
-            primer corte</div>
-          <div class="drag-item" draggable="true" data-cat="socioeconomico" ondragstart="dragFactor(event)">Necesidad de
-            trabajar</div>
-          <div class="drag-item" draggable="true" data-cat="psicosocial" ondragstart="dragFactor(event)">Apoyo familiar
+        <!-- Columna derecha: contenido -->
+        <div class="m1-contenido">
+          <div class="avatar-box">
+            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div>
+              <div class="avatar-nombre">ALDO · Módulo 3</div>
+              <div class="avatar-texto">
+                Los factores de riesgo se agrupan en tres grandes categorías. La clave está en combinarlas:
+                un modelo que solo mira notas pierde la mitad del panorama. Clasifica los factores en la actividad.
+              </div>
+            </div>
           </div>
-          <div class="drag-item" draggable="true" data-cat="academico" ondragstart="dragFactor(event)">Asistencia a
-            clases</div>
-          <div class="drag-item" draggable="true" data-cat="socioeconomico" ondragstart="dragFactor(event)">Acceso a
-            internet</div>
-          <div class="drag-item" draggable="true" data-cat="psicosocial" ondragstart="dragFactor(event)">Nivel de
-            motivación</div>
+
+          <div class="card">
+            <div class="card-titulo">Tres categorías de factores</div>
+            <p>Los <strong>factores académicos</strong> incluyen rendimiento, asistencia y materias reprobadas. Los
+              <strong>factores socioeconómicos</strong> comprenden estrato, necesidad de trabajar y acceso a internet. Los
+              <strong>factores psicosociales</strong> abarcan apoyo familiar, motivación y salud mental. Chalela-Naffah et
+              al. (2020) demostraron que los factores psicosociales son determinantes críticos, especialmente en poblaciones
+              vulnerables.</p>
+          </div>
+
+          <div class="actividad-box">
+            <div class="actividad-titulo">Actividad · Clasificar factores de riesgo</div>
+            <p class="actividad-instruccion">Arrastra cada factor a su categoría correcta.</p>
+
+            <div class="drag-container">
+              <div class="drag-col" id="col-academico" ondragover="allowDrop(event)" ondrop="dropFactor(event,'academico')">
+                <div class="drag-col-titulo">Académico</div>
+              </div>
+              <div class="drag-col" id="col-socioeconomico" ondragover="allowDrop(event)"
+                ondrop="dropFactor(event,'socioeconomico')">
+                <div class="drag-col-titulo">Socioeconómico</div>
+              </div>
+              <div class="drag-col" id="col-psicosocial" ondragover="allowDrop(event)"
+                ondrop="dropFactor(event,'psicosocial')">
+                <div class="drag-col-titulo">Psicosocial</div>
+              </div>
+            </div>
+
+            <div id="factores-pool">
+              <div class="drag-item" draggable="true" data-cat="academico" ondragstart="dragFactor(event)">Nota parcial primer corte</div>
+              <div class="drag-item" draggable="true" data-cat="socioeconomico" ondragstart="dragFactor(event)">Necesidad de trabajar</div>
+              <div class="drag-item" draggable="true" data-cat="psicosocial" ondragstart="dragFactor(event)">Apoyo familiar</div>
+              <div class="drag-item" draggable="true" data-cat="academico" ondragstart="dragFactor(event)">Asistencia a clases</div>
+              <div class="drag-item" draggable="true" data-cat="socioeconomico" ondragstart="dragFactor(event)">Acceso a internet</div>
+              <div class="drag-item" draggable="true" data-cat="psicosocial" ondragstart="dragFactor(event)">Nivel de motivación</div>
+            </div>
+
+            <button type="button" class="btn-verificar btn-verificar-factores" onclick="verificarFactores()">Verificar clasificación</button>
+            <div class="retro" id="retro-factores"></div>
+          </div>
         </div>
 
-        <button class="btn-verificar btn-verificar-factores" onclick="verificarFactores()">Verificar
-          clasificación</button>
-        <div class="retro" id="retro-factores"></div>
       </div>
 
     </div>
