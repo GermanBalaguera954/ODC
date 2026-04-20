@@ -30,11 +30,24 @@ let pantallaActual = 0;
  * @param {number} n - Índice de la pantalla destino
  */
 function irA(n) {
+  if (n !== 0) {
+    mostrarConstruccion();
+    return;
+  }
   document.getElementById(PANTALLAS[pantallaActual]).classList.remove("activa");
   pantallaActual = n;
   document.getElementById(PANTALLAS[n]).classList.add("activa");
   window.scrollTo({ top: 0, behavior: "smooth" });
   cerrarMenu();
+}
+
+function mostrarConstruccion() {
+  cerrarMenu();
+  document.getElementById("modalConstruccion").classList.add("abierto");
+}
+
+function cerrarConstruccion() {
+  document.getElementById("modalConstruccion").classList.remove("abierto");
 }
 
 /* ════════════════════════════════════════════════════════════

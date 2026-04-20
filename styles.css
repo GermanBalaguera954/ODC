@@ -1253,6 +1253,37 @@ body {
     text-align: center;
 }
 
+/* ── MODAL EN CONSTRUCCIÓN ── */
+.construccion-panel {
+    background: var(--blanco);
+    border-radius: var(--radio);
+    padding: 40px 32px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 0.25s ease;
+}
+
+.construccion-icono {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.construccion-titulo {
+    font-family: var(--font-titulo);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--verde-oscuro);
+    margin-bottom: 12px;
+}
+
+.construccion-texto {
+    font-size: 14px;
+    color: var(--gris);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
 /* ── ALDO INTRO CARD (portada) ── */
 .aldo-intro {
     margin-top: 28px;
