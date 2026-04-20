@@ -43,10 +43,11 @@ function irA(n) {
   reproducirVideoModulo(n);
 }
 
+
 let videoTimer = null;
 
 function reproducirVideoModulo(n) {
-  const videos = { 2: "video-m1", 3: "video-m2", 4: "video-m3" };
+  const videos = { 0: "video-portada", 1: "video-p1", 2: "video-m1", 3: "video-m2", 4: "video-m3", 5: "video-m4", 6: "video-m5", 7: "video-m6", 8: "video-p8", 9: "video-p9" };
   if (!videos[n]) return;
   const video = document.getElementById(videos[n]);
   if (!video) return;
@@ -56,13 +57,15 @@ function reproducirVideoModulo(n) {
 function detenerVideoModulo(n) {
   clearTimeout(videoTimer);
   videoTimer = null;
-  const videos = { 2: "video-m1", 3: "video-m2", 4: "video-m3" };
+  const videos = { 0: "video-portada", 1: "video-p1", 2: "video-m1", 3: "video-m2", 4: "video-m3", 5: "video-m4", 6: "video-m5", 7: "video-m6", 8: "video-p8", 9: "video-p9" };
   if (!videos[n]) return;
   const video = document.getElementById(videos[n]);
   if (!video) return;
   video.pause();
   video.currentTime = 0;
 }
+
+document.addEventListener("DOMContentLoaded", () => reproducirVideoModulo(0));
 
 function mostrarConstruccion() {
   cerrarMenu();
@@ -93,7 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target === this) cerrarMenu();
     });
 
-  // Inicializar drag and drop del Módulo 2
   iniciarDragOrden();
 });
 

@@ -118,45 +118,57 @@
     P0 · PORTADA
     ══════════════════════════════════════════════════════════ -->
   <div class="pantalla activa" id="p0">
+    <div class="topbar">
+      <div class="topbar-logo">ALDO · UCundinamarca</div>
+      <div class="topbar-num">Pantalla 1 / 12</div>
+      <button type="button" class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
+    </div>
     <div class="contenido portada-contenido">
 
-      <div class="portada-hero">
-        <div class="portada-tag">ODC · Universidad de Cundinamarca</div>
-        <h1 class="portada-titulo">
-          Inteligencia Artificial para la <span>Detección Temprana</span> de Deserción Universitaria
-        </h1>
-        <p class="portada-subtitulo">
-          Explora cómo los modelos predictivos basados en IA pueden identificar estudiantes
-          en riesgo desde las primeras semanas del semestre.
-        </p>
-        <div class="portada-meta">
-          <div class="meta-chip">
-            <div class="dot"></div>Educación Superior · Colombia
+      <div class="portada-hero-layout">
+
+        <div>
+          <div class="portada-hero">
+            <div class="portada-tag">ODC · Universidad de Cundinamarca</div>
+            <h1 class="portada-titulo">
+              Inteligencia Artificial para la <span>Detección Temprana</span> de Deserción Universitaria
+            </h1>
+            <p class="portada-subtitulo">
+              Explora cómo los modelos predictivos basados en IA pueden identificar estudiantes
+              en riesgo desde las primeras semanas del semestre.
+            </p>
+            <div class="portada-meta">
+              <div class="meta-chip">
+                <div class="dot"></div>Educación Superior · Colombia
+              </div>
+              <div class="meta-chip">
+                <div class="dot"></div>12 pantallas interactivas
+              </div>
+              <div class="meta-chip">
+                <div class="dot"></div>~45 min de recorrido
+              </div>
+              <div class="meta-chip">
+                <div class="dot"></div>2026 · v1.0
+              </div>
+            </div>
           </div>
-          <div class="meta-chip">
-            <div class="dot"></div>12 pantallas interactivas
-          </div>
-          <div class="meta-chip">
-            <div class="dot"></div>~45 min de recorrido
-          </div>
-          <div class="meta-chip">
-            <div class="dot"></div>2026 · v1.0
+          <div class="portada-acciones">
+            <button type="button" class="btn-iniciar" onclick="irA(1)">▶ Iniciar recorrido</button>
+            <button type="button" class="btn-menu-portada" onclick="abrirMenu()">☰ Ver índice</button>
           </div>
         </div>
-      </div>
 
-      <div class="portada-acciones">
-        <button class="btn-iniciar" onclick="irA(1)">▶ Iniciar recorrido</button>
-        <button class="btn-menu-portada" onclick="abrirMenu()">☰ Ver índice</button>
+        <div class="m1-video-col">
+          <video id="video-portada" class="modulo-video" src="portada.mp4" controls></video>
+        </div>
+
       </div>
 
       <!-- Presentación de ALDO -->
       <div class="aldo-intro">
-        <div class="aldo-avatar">
-          AL</div>
+        <div class="aldo-avatar">AL</div>
         <div>
-          <div class="aldo-label">
-            Hola, soy ALDO</div>
+          <div class="aldo-label">Hola, soy ALDO</div>
           <div class="aldo-desc">
             Agente de Liderazgo y Detección Oportuna. Seré tu guía en este recorrido sobre inteligencia artificial y
             deserción universitaria. Cuando estés listo, haz clic en <strong>Iniciar recorrido</strong>.
@@ -164,6 +176,13 @@
         </div>
       </div>
 
+    </div>
+    <div class="nav-bottom">
+      <div></div>
+      <div class="progreso-wrap">
+        <div class="progreso-fill progreso-p0"></div>
+      </div>
+      <button type="button" class="btn-nav btn-next" onclick="irA(1)">Siguiente →</button>
     </div>
   </div>
 
@@ -174,7 +193,7 @@
   <div class="pantalla" id="p1">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 1 / 12</div>
+      <div class="topbar-num">Pantalla 2 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -184,48 +203,43 @@
         <h2 class="modulo-titulo">¿Qué vas a aprender y a quién va dirigido?</h2>
       </div>
 
-      <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
-        </div>
-        <div>
-          <div class="avatar-nombre">ALDO · Guía</div>
-          <div class="avatar-texto">
-            Antes de iniciar, quiero contarte qué vas a lograr al terminar este ODC y si este contenido es para ti.
-            El Resultado Esperado de Aprendizaje te dice exactamente qué serás capaz de hacer al final del recorrido.
+      <div class="m1-layout">
+        <div class="m1-contenido">
+          <div class="avatar-box">
+            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div>
+              <div class="avatar-nombre">ALDO · Guía</div>
+              <div class="avatar-texto">
+                Antes de iniciar, quiero contarte qué vas a lograr al terminar este ODC y si este contenido es para ti.
+                El Resultado Esperado de Aprendizaje te dice exactamente qué serás capaz de hacer al final del recorrido.
+              </div>
+            </div>
           </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p1')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~30 seg · Archivo: audio/p1.mp3</span>
+
+          <div class="rea-card">
+            <div class="rea-label">Resultado Esperado de Aprendizaje (REA)</div>
+            <div class="rea-texto">
+              Al finalizar el ODC, el estudiante <strong>analizará</strong> las principales técnicas de inteligencia
+              artificial aplicadas a la detección temprana de deserción universitaria en instituciones de educación superior
+              colombianas, a partir de la revisión de modelos predictivos basados en datos académicos, socioeconómicos y de
+              comportamiento estudiantil, evidenciado por la resolución correcta de al menos <strong>6 de 8 ítems</strong>
+              en la evaluación final y la identificación de los factores de riesgo más relevantes según la evidencia empírica.
+            </div>
+          </div>
+
+          <div class="poblacion-card">
+            <div class="poblacion-label">Población objetivo</div>
+            <div class="poblacion-texto">
+              Dirigido a <strong>docentes, coordinadores académicos, directivos y profesionales de bienestar
+                universitario</strong> de instituciones de educación superior en Colombia, con interés en implementar
+              sistemas de alerta temprana basados en inteligencia artificial.
+              <strong>No se requieren conocimientos previos</strong> en programación ni en ciencia de datos.
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="rea-card">
-        <div class="rea-label">Resultado Esperado de Aprendizaje (REA)</div>
-        <div class="rea-texto">
-          Al finalizar el ODC, el estudiante <strong>analizará</strong> las principales técnicas de inteligencia
-          artificial
-          aplicadas a la detección temprana de deserción universitaria en instituciones de educación superior
-          colombianas,
-          a partir de la revisión de modelos predictivos basados en datos académicos, socioeconómicos y de
-          comportamiento
-          estudiantil, evidenciado por la resolución correcta de al menos <strong>6 de 8 ítems</strong> en la evaluación
-          final y la identificación de los factores de riesgo más relevantes según la evidencia empírica.
-        </div>
-      </div>
-
-      <div class="poblacion-card">
-        <div class="poblacion-label">Población objetivo</div>
-        <div class="poblacion-texto">
-          Dirigido a <strong>docentes, coordinadores académicos, directivos y profesionales de bienestar
-            universitario</strong>
-          de instituciones de educación superior en Colombia, con interés en implementar sistemas de alerta temprana
-          basados en inteligencia artificial. <strong>No se requieren conocimientos previos</strong> en programación
-          ni en ciencia de datos.
+        <div class="m1-video-col">
+          <video id="video-p1" class="modulo-video" src="punto_partida.mp4" controls></video>
         </div>
       </div>
 
@@ -246,7 +260,7 @@
   <div class="pantalla" id="p2">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 2 / 12</div>
+      <div class="topbar-num">Pantalla 3 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -360,7 +374,7 @@
   <div class="pantalla" id="p3">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 3 / 12</div>
+      <div class="topbar-num">Pantalla 4 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -433,7 +447,7 @@
   <div class="pantalla" id="p4">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 4 / 12</div>
+      <div class="topbar-num">Pantalla 5 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -523,7 +537,7 @@
   <div class="pantalla" id="p5">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 5 / 12</div>
+      <div class="topbar-num">Pantalla 6 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -533,79 +547,76 @@
         <h2 class="modulo-titulo">Inteligencia artificial y aprendizaje automático</h2>
       </div>
 
-      <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
-        </div>
-        <div>
-          <div class="avatar-nombre">ALDO · Módulo 4</div>
-          <div class="avatar-texto">
-            ¿Cómo aprende una máquina a predecir si un estudiante va a desertar?
-            Imagina miles de historias de estudiantes anteriores convertidas en patrones. Eso es machine learning.
-          </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p5')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~85 seg · Archivo: audio/p5.mp3</span>
-          </div>
-        </div>
-      </div>
+      <div class="m1-layout m1-layout-invertido">
 
-      <div class="card">
-        <div class="card-titulo">¿Cómo funciona el machine learning?</div>
-        <p>El sistema analiza datos históricos de estudiantes anteriores, encuentra patrones comunes entre quienes
-          abandonaron, y construye una regla de predicción. Cuando llega un estudiante nuevo, calcula la probabilidad de
-          abandono. Los algoritmos más usados son árboles de decisión, bosques aleatorios, redes neuronales y modelos de
-          ensamble.</p>
-      </div>
+        <!-- Columna izquierda: video fijo -->
+        <div class="m1-video-col">
+          <video id="video-m4" class="modulo-video" src="modulo4.mp4" controls></video>
+        </div>
 
-      <div class="card">
-        <div class="card-titulo">Conceptos clave</div>
-        <div class="info-chips">
-          <div class="info-chip">Árbol de decisión
-            <div class="chip-tooltip">Algoritmo que divide los datos en ramas según condiciones (ej: nota menor a 3.0 →
-              riesgo alto).</div>
+        <!-- Columna derecha: contenido -->
+        <div class="m1-contenido">
+          <div class="avatar-box">
+            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div>
+              <div class="avatar-nombre">ALDO · Módulo 4</div>
+              <div class="avatar-texto">
+                ¿Cómo aprende una máquina a predecir si un estudiante va a desertar?
+                Imagina miles de historias de estudiantes anteriores convertidas en patrones. Eso es machine learning.
+              </div>
+            </div>
           </div>
-          <div class="info-chip">Bosque aleatorio
-            <div class="chip-tooltip">Combina múltiples árboles de decisión para mejorar la precisión y reducir el
-              sobreajuste del modelo.</div>
+
+          <div class="card">
+            <div class="card-titulo">¿Cómo funciona el machine learning?</div>
+            <p>El sistema analiza datos históricos de estudiantes anteriores, encuentra patrones comunes entre quienes
+              abandonaron, y construye una regla de predicción. Cuando llega un estudiante nuevo, calcula la probabilidad de
+              abandono. Los algoritmos más usados son árboles de decisión, bosques aleatorios, redes neuronales y modelos de
+              ensamble.</p>
           </div>
-          <div class="info-chip">Red neuronal
-            <div class="chip-tooltip">Inspirada en el cerebro humano, aprende representaciones complejas de los datos
-              organizadas en capas.</div>
+
+          <div class="card">
+            <div class="card-titulo">Conceptos clave</div>
+            <div class="info-chips">
+              <div class="info-chip">Árbol de decisión
+                <div class="chip-tooltip">Algoritmo que divide los datos en ramas según condiciones (ej: nota menor a 3.0 → riesgo alto).</div>
+              </div>
+              <div class="info-chip">Bosque aleatorio
+                <div class="chip-tooltip">Combina múltiples árboles de decisión para mejorar la precisión y reducir el sobreajuste del modelo.</div>
+              </div>
+              <div class="info-chip">Red neuronal
+                <div class="chip-tooltip">Inspirada en el cerebro humano, aprende representaciones complejas de los datos organizadas en capas.</div>
+              </div>
+              <div class="info-chip">Modelo de ensamble
+                <div class="chip-tooltip">Combina varios modelos distintos para obtener predicciones más robustas y precisas que cualquier modelo individual.</div>
+              </div>
+            </div>
           </div>
-          <div class="info-chip">Modelo de ensamble
-            <div class="chip-tooltip">Combina varios modelos distintos para obtener predicciones más robustas y precisas
-              que cualquier modelo individual.</div>
+
+          <div class="actividad-box">
+            <div class="actividad-titulo">Actividad · Selección múltiple</div>
+            <div class="pregunta">¿Cuál es el objetivo principal de aplicar machine learning a la deserción universitaria?</div>
+            <ul class="opciones-lista" id="opciones-m4">
+              <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'a')">
+                <div class="opcion-letra">A</div>Reemplazar a los docentes en el proceso de evaluación
+              </li>
+              <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'b')">
+                <div class="opcion-letra">B</div>Identificar estudiantes en riesgo para intervenir a tiempo
+              </li>
+              <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'c')">
+                <div class="opcion-letra">C</div>Automatizar la matrícula de los estudiantes
+              </li>
+              <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'d')">
+                <div class="opcion-letra">D</div>Eliminar los factores socioeconómicos del rendimiento
+              </li>
+            </ul>
+            <button type="button" class="btn-verificar" onclick="verificarSM('m4','b',
+              'El machine learning en educación es una herramienta de apoyo a la decisión humana. Su objetivo es detectar señales de riesgo temprano para facilitar intervenciones oportunas y personalizadas.',
+              'El modelo no toma decisiones por las personas, sino que genera alertas para que docentes y orientadores actúen de manera oportuna. No reemplaza ningún proceso humano.')">Verificar</button>
+            <div class="retro" id="retro-m4"></div>
           </div>
         </div>
-      </div>
 
-      <div class="actividad-box">
-        <div class="actividad-titulo">Actividad · Selección múltiple</div>
-        <div class="pregunta">¿Cuál es el objetivo principal de aplicar machine learning a la deserción universitaria?
-        </div>
-        <ul class="opciones-lista" id="opciones-m4">
-          <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'a')">
-            <div class="opcion-letra">A</div>Reemplazar a los docentes en el proceso de evaluación
-          </li>
-          <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'b')">
-            <div class="opcion-letra">B</div>Identificar estudiantes en riesgo para intervenir a tiempo
-          </li>
-          <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'c')">
-            <div class="opcion-letra">C</div>Automatizar la matrícula de los estudiantes
-          </li>
-          <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'d')">
-            <div class="opcion-letra">D</div>Eliminar los factores socioeconómicos del rendimiento
-          </li>
-        </ul>
-        <button class="btn-verificar"
-          onclick="verificarSM('m4','b',
-        'El machine learning en educación es una herramienta de apoyo a la decisión humana. Su objetivo es detectar señales de riesgo temprano para facilitar intervenciones oportunas y personalizadas.',
-        'El modelo no toma decisiones por las personas, sino que genera alertas para que docentes y orientadores actúen de manera oportuna. No reemplaza ningún proceso humano.')">Verificar</button>
-        <div class="retro" id="retro-m4"></div>
       </div>
 
     </div>
@@ -625,7 +636,7 @@
   <div class="pantalla" id="p6">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 6 / 12</div>
+      <div class="topbar-num">Pantalla 7 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -636,24 +647,17 @@
       </div>
 
       <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
-        </div>
+        <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
         <div>
           <div class="avatar-nombre">ALDO · Módulo 5</div>
           <div class="avatar-texto">
             ¿Qué tan precisos son estos modelos en la práctica? La evidencia internacional es sorprendente.
             Vamos a ver la métrica clave: el AUC. Completa la frase al final para demostrar que lo entendiste.
           </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p6')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~90 seg · Archivo: audio/p6.mp3</span>
-          </div>
         </div>
       </div>
+
+      <video id="video-m5" class="modulo-video modulo-video-landscape" src="modulo5.mp4" controls></video>
 
       <div class="stats-grid">
         <div class="stat-card">
@@ -686,15 +690,14 @@
           para distinguir entre estudiantes en riesgo y estudiantes que continuarán sus estudios.
         </div>
         <div class="opciones-completar">
-          <button class="btn-completar" onclick="seleccionarCompletar(this,'aleatoria')">aleatoria</button>
-          <button class="btn-completar" onclick="seleccionarCompletar(this,'básica')">básica</button>
-          <button class="btn-completar" onclick="seleccionarCompletar(this,'casi perfecta')">casi perfecta</button>
-          <button class="btn-completar" onclick="seleccionarCompletar(this,'insuficiente')">insuficiente</button>
+          <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'aleatoria')">aleatoria</button>
+          <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'básica')">básica</button>
+          <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'casi perfecta')">casi perfecta</button>
+          <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'insuficiente')">insuficiente</button>
         </div>
-        <button class="btn-verificar"
-          onclick="verificarCompletar('casi perfecta',
-        'El AUC de 0,97 sobre 1,0 posible indica una discriminación casi perfecta según Niyogisubizo et al. (2022). Es uno de los valores más altos reportados en la literatura científica sobre deserción.',
-        'Recuerda: AUC de 1,0 es perfecto y 0,5 es aleatorio. Un valor de 0,97 está muy cerca del máximo, lo que indica una capacidad discriminativa extraordinaria.')">Verificar</button>
+        <button type="button" class="btn-verificar" onclick="verificarCompletar('casi perfecta',
+          'El AUC de 0,97 sobre 1,0 posible indica una discriminación casi perfecta según Niyogisubizo et al. (2022). Es uno de los valores más altos reportados en la literatura científica sobre deserción.',
+          'Recuerda: AUC de 1,0 es perfecto y 0,5 es aleatorio. Un valor de 0,97 está muy cerca del máximo, lo que indica una capacidad discriminativa extraordinaria.')">Verificar</button>
         <div class="retro" id="retro-m5"></div>
       </div>
 
@@ -715,7 +718,7 @@
   <div class="pantalla" id="p7">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 7 / 12</div>
+      <div class="topbar-num">Pantalla 8 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -725,53 +728,48 @@
         <h2 class="modulo-titulo">Implementación y ética de la IA educativa</h2>
       </div>
 
-      <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
-        </div>
-        <div>
-          <div class="avatar-nombre">ALDO · Módulo 6</div>
-          <div class="avatar-texto">
-            Saber construir un modelo no es suficiente. La pregunta real es: ¿cómo usamos esa información
-            de manera responsable? Analiza el caso práctico y elige la acción más apropiada.
-          </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p7')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~90 seg · Archivo: audio/p7.mp3</span>
-          </div>
-        </div>
-      </div>
+      <div class="m1-layout">
 
-      <div class="card">
-        <div class="card-titulo">Dimensiones de una implementación responsable</div>
-        <p>Una implementación responsable requiere atender tres dimensiones. <strong>Técnica:</strong> datos históricos
-          de al menos 3 cohortes e infraestructura adecuada. <strong>Institucional:</strong> protocolo claro de
-          intervención (¿quién actúa?, ¿en qué plazo?). <strong>Ética:</strong> protección de datos personales, evitar
-          estigmatización y garantizar que la tecnología sirva al estudiante, no al revés.</p>
-      </div>
+        <!-- Columna izquierda: contenido -->
+        <div class="m1-contenido">
+          <div class="avatar-box">
+            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div>
+              <div class="avatar-nombre">ALDO · Módulo 6</div>
+              <div class="avatar-texto">
+                Saber construir un modelo no es suficiente. La pregunta real es: ¿cómo usamos esa información
+                de manera responsable? Analiza el caso práctico y elige la acción más apropiada.
+              </div>
+            </div>
+          </div>
 
-      <div class="card">
-        <div class="card-titulo">Riesgos éticos clave</div>
-        <div class="info-chips">
-          <div class="info-chip">Estigmatización
-            <div class="chip-tooltip">Etiquetar a un estudiante como "en riesgo" sin protocolo humano puede afectar su
-              autoestima y empeorar su rendimiento.</div>
+          <div class="card">
+            <div class="card-titulo">Dimensiones de una implementación responsable</div>
+            <p>Una implementación responsable requiere atender tres dimensiones. <strong>Técnica:</strong> datos históricos
+              de al menos 3 cohortes e infraestructura adecuada. <strong>Institucional:</strong> protocolo claro de
+              intervención (¿quién actúa?, ¿en qué plazo?). <strong>Ética:</strong> protección de datos personales, evitar
+              estigmatización y garantizar que la tecnología sirva al estudiante, no al revés.</p>
           </div>
-          <div class="info-chip">Sesgos del modelo
-            <div class="chip-tooltip">Si los datos históricos tienen sesgos (ej. más deserción en estratos bajos), el
-              modelo los perpetúa y amplifica.</div>
-          </div>
-          <div class="info-chip">Privacidad de datos
-            <div class="chip-tooltip">Los datos académicos y socioeconómicos son sensibles. Requieren protección según
-              la Ley 1581 de 2012 (Colombia).</div>
-          </div>
-        </div>
-      </div>
 
-      <div class="actividad-box">
+          <div class="card">
+            <div class="card-titulo">Riesgos éticos clave</div>
+            <div class="info-chips">
+              <div class="info-chip">Estigmatización
+                <div class="chip-tooltip">Etiquetar a un estudiante como "en riesgo" sin protocolo humano puede afectar su
+                  autoestima y empeorar su rendimiento.</div>
+              </div>
+              <div class="info-chip">Sesgos del modelo
+                <div class="chip-tooltip">Si los datos históricos tienen sesgos (ej. más deserción en estratos bajos), el
+                  modelo los perpetúa y amplifica.</div>
+              </div>
+              <div class="info-chip">Privacidad de datos
+                <div class="chip-tooltip">Los datos académicos y socioeconómicos son sensibles. Requieren protección según
+                  la Ley 1581 de 2012 (Colombia).</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="actividad-box">
         <div class="actividad-titulo">Actividad · Caso práctico</div>
         <div class="pregunta">Una universidad identifica con IA a 50 estudiantes en riesgo en la primera semana del
           semestre. ¿Cuál es la acción más apropiada?</div>
@@ -797,6 +795,15 @@
         <div class="retro" id="retro-m6"></div>
       </div>
 
+        </div><!-- fin m1-contenido -->
+
+        <!-- Columna derecha: video -->
+        <div class="m1-video-col">
+          <video id="video-m6" class="modulo-video" src="modulo6.mp4" controls></video>
+        </div>
+
+      </div><!-- fin m1-layout -->
+
     </div>
     <div class="nav-bottom">
       <button class="btn-nav btn-prev" onclick="irA(6)">← Módulo 5</button>
@@ -814,7 +821,7 @@
   <div class="pantalla" id="p8">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 8 / 12</div>
+      <div class="topbar-num">Pantalla 9 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -824,23 +831,21 @@
         <h2 class="modulo-titulo">Pon a prueba lo aprendido</h2>
       </div>
 
-      <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
+      <div class="m1-layout m1-layout-centrado">
+        <div class="m1-contenido">
+          <div class="avatar-box">
+            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div>
+              <div class="avatar-nombre">ALDO · Evaluación</div>
+              <div class="avatar-texto">
+                Llegó el momento. Tienes 8 preguntas alineadas al REA. Necesitas responder correctamente
+                al menos 6 para aprobar. Cada pregunta tiene retroalimentación inmediata. ¡Adelante!
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="avatar-nombre">ALDO · Evaluación</div>
-          <div class="avatar-texto">
-            Llegó el momento. Tienes 8 preguntas alineadas al REA. Necesitas responder correctamente
-            al menos 6 para aprobar. Cada pregunta tiene retroalimentación inmediata. ¡Adelante!
-          </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p8')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~30 seg · Archivo: audio/p8.mp3</span>
-          </div>
+        <div class="m1-video-col">
+          <video id="video-p8" class="modulo-video" src="evaluacion.mp4" controls></video>
         </div>
       </div>
 
@@ -1112,7 +1117,7 @@
   <div class="pantalla" id="p9">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 9 / 12</div>
+      <div class="topbar-num">Pantalla 10 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -1122,23 +1127,21 @@
         <h2 class="modulo-titulo">Lo que aprendiste y los siguientes pasos</h2>
       </div>
 
-      <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div>
+      <div class="m1-layout m1-layout-invertido m1-layout-centrado">
+        <div class="m1-video-col">
+          <video id="video-p9" class="modulo-video" src="conclusiones.mp4" controls></video>
         </div>
-        <div>
-          <div class="avatar-nombre">ALDO · Cierre</div>
-          <div class="avatar-texto">
-            ¡Llegaste al final del recorrido! Has explorado el problema de la deserción universitaria en Colombia
-            y cómo la inteligencia artificial puede contribuir a prevenirla. Aquí tienes la síntesis de lo más
-            importante.
-          </div>
-          <div class="audio-ctrl">
-            <button class="btn-audio" onclick="reproducirAudio('p9')" title="Reproducir audio de ALDO">
-              <svg viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </button>
-            <span class="audio-label">Audio de ALDO · ~60 seg · Archivo: audio/p9.mp3</span>
+        <div class="m1-contenido">
+          <div class="avatar-box">
+            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div>
+              <div class="avatar-nombre">ALDO · Cierre</div>
+              <div class="avatar-texto">
+                ¡Llegaste al final del recorrido! Has explorado el problema de la deserción universitaria en Colombia
+                y cómo la inteligencia artificial puede contribuir a prevenirla. Aquí tienes la síntesis de lo más
+                importante.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1230,7 +1233,7 @@
   <div class="pantalla" id="p10">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 10 / 12</div>
+      <div class="topbar-num">Pantalla 11 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -1290,7 +1293,7 @@
   <div class="pantalla" id="p11">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 11 / 12</div>
+      <div class="topbar-num">Pantalla 12 / 12</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
