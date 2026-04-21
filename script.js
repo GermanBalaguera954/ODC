@@ -54,7 +54,7 @@ function reproducirVideoModulo(n) {
   videoTimer = setTimeout(() => {
     video.play()
       .then(() => { video.muted = false; })
-      .catch(() => {});
+      .catch(() => { });
   }, 1500);
 }
 

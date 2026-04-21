@@ -97,7 +97,7 @@
         <div class="menu-item" onclick="irA(10)">
           <div class="menu-item-num">R</div>
           <div>
-            <div class="menu-item-titulo">Referencias APA 7</div>
+            <div class="menu-item-titulo">Referencias</div>
             <div class="menu-item-sub">Fuentes bibliográficas</div>
           </div>
         </div>
@@ -148,32 +148,43 @@
                 <div class="dot"></div>~45 min de recorrido
               </div>
               <div class="meta-chip">
-                <div class="dot"></div>2026 · v1.0
+                <div class="dot"></div>version 1.0 · 2026
               </div>
+            </div>
+            <div class="portada-autor">
+              Germán Andrés Balaguera Pinzón · Universidad de Cundinamarca
             </div>
           </div>
           <div class="portada-acciones">
             <button type="button" class="btn-iniciar" onclick="irA(1)">▶ Iniciar recorrido</button>
             <button type="button" class="btn-menu-portada" onclick="abrirMenu()">☰ Ver índice</button>
           </div>
+
+          <div class="aldo-intro">
+            <div class="aldo-avatar">AL</div>
+            <div>
+              <div class="aldo-label">Hola, soy ALDO</div>
+              <div class="aldo-desc">
+                Agente de Liderazgo y Detección Oportuna. Seré tu guía en este recorrido sobre inteligencia artificial y
+                deserción universitaria. Cuando estés listo, haz clic en <strong>Iniciar recorrido</strong>.
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="m1-video-col">
-          <video id="video-portada" class="modulo-video" src="videos/portada.mp4" controls muted></video>
+          <video id="video-portada" class="modulo-video" src="videos/portada.mp4" controls muted
+            aria-label="Video de presentación del ODC. ALDO da la bienvenida e introduce el recorrido."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">Hola, soy ALDO, tu Agente de Liderazgo
+                y Detección Oportuna. En este recorrido explorarás cómo la inteligencia artificial puede identificar,
+                desde las primeras semanas del semestre, a estudiantes en riesgo de desertar. No necesitas conocimientos
+                técnicos previos, solo curiosidad y disposición para aprender. Haz clic en Iniciar recorrido cuando
+                estés listo.</span></div>
+          </details>
         </div>
 
-      </div>
-
-      <!-- Presentación de ALDO -->
-      <div class="aldo-intro">
-        <div class="aldo-avatar">AL</div>
-        <div>
-          <div class="aldo-label">Hola, soy ALDO</div>
-          <div class="aldo-desc">
-            Agente de Liderazgo y Detección Oportuna. Seré tu guía en este recorrido sobre inteligencia artificial y
-            deserción universitaria. Cuando estés listo, haz clic en <strong>Iniciar recorrido</strong>.
-          </div>
-        </div>
       </div>
 
     </div>
@@ -203,15 +214,31 @@
         <h2 class="modulo-titulo">¿Qué vas a aprender y a quién va dirigido?</h2>
       </div>
 
-      <div class="m1-layout">
+      <div class="m1-layout m1-layout-invertido">
+        <div class="m1-video-col">
+          <video id="video-p1" class="modulo-video" src="videos/punto_partida.mp4" controls
+            aria-label="ALDO explica el Resultado Esperado de Aprendizaje y la población objetivo del ODC."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">Antes de comenzar, dos cosas clave.
+                Primero, qué lograrás: al terminar serás capaz de analizar las principales técnicas de IA aplicadas a la
+                detección temprana de deserción e identificar los factores de riesgo según la evidencia científica. Lo
+                demostrarás respondiendo correctamente al menos seis de las ocho preguntas de la evaluación final.
+                Segundo, a quién va dirigido: docentes, coordinadores, directivos y profesionales de bienestar
+                universitario. Sin conocimiento técnico previo. Te veo en el inico del recorrido.</span></div>
+          </details>
+        </div>
+
         <div class="m1-contenido">
           <div class="avatar-box">
-            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div class="avatar-img">AL<div class="avatar-pulse"></div>
+            </div>
             <div>
               <div class="avatar-nombre">ALDO · Guía</div>
               <div class="avatar-texto">
                 Antes de iniciar, quiero contarte qué vas a lograr al terminar este ODC y si este contenido es para ti.
-                El Resultado Esperado de Aprendizaje te dice exactamente qué serás capaz de hacer al final del recorrido.
+                El Resultado Esperado de Aprendizaje te dice exactamente qué serás capaz de hacer al final del
+                recorrido.
               </div>
             </div>
           </div>
@@ -220,10 +247,11 @@
             <div class="rea-label">Resultado Esperado de Aprendizaje (REA)</div>
             <div class="rea-texto">
               Al finalizar el ODC, el estudiante <strong>analizará</strong> las principales técnicas de inteligencia
-              artificial aplicadas a la detección temprana de deserción universitaria en instituciones de educación superior
-              colombianas, a partir de la revisión de modelos predictivos basados en datos académicos, socioeconómicos y de
-              comportamiento estudiantil, evidenciado por la resolución correcta de al menos <strong>6 de 8 ítems</strong>
-              en la evaluación final y la identificación de los factores de riesgo más relevantes según la evidencia empírica.
+              artificial aplicadas a la detección temprana de deserción universitaria en instituciones de educación
+              superior colombianas, a partir de la revisión de modelos predictivos basados en datos académicos,
+              socioeconómicos y de comportamiento estudiantil, evidenciado por la resolución correcta de al menos
+              <strong>6 de 8 ítems</strong> en la evaluación final y la identificación de los factores de riesgo más
+              relevantes según la evidencia empírica.
             </div>
           </div>
 
@@ -236,10 +264,6 @@
               <strong>No se requieren conocimientos previos</strong> en programación ni en ciencia de datos.
             </div>
           </div>
-        </div>
-
-        <div class="m1-video-col">
-          <video id="video-p1" class="modulo-video" src="videos/punto_partida.mp4" controls></video>
         </div>
       </div>
 
@@ -275,7 +299,8 @@
         <!-- Columna izquierda: contenido -->
         <div class="m1-contenido">
           <div class="avatar-box">
-            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div class="avatar-img">AL<div class="avatar-pulse"></div>
+            </div>
             <div>
               <div class="avatar-nombre">ALDO · Módulo 1</div>
               <div class="avatar-texto">
@@ -303,9 +328,11 @@
 
           <div class="card">
             <div class="card-titulo">¿Qué dice la evidencia?</div>
-            <p>En Colombia, aproximadamente uno de cada cuatro estudiantes que ingresa a la educación superior no culmina
+            <p>En Colombia, aproximadamente uno de cada cuatro estudiantes que ingresa a la educación superior no
+              culmina
               sus estudios. Este fenómeno representa una pérdida significativa de capital humano y oportunidades de
-              desarrollo social. Las causas son múltiples: factores económicos, académicos, psicosociales y geográficos se
+              desarrollo social. Las causas son múltiples: factores económicos, académicos, psicosociales y geográficos
+              se
               combinan de manera diferente en cada estudiante.</p>
           </div>
 
@@ -321,7 +348,8 @@
                   calculado al finalizar el programa académico.</div>
               </div>
               <div class="info-chip">¿Qué es cohorte?
-                <div class="chip-tooltip">Grupo de estudiantes que ingresan al mismo tiempo a un programa académico en una
+                <div class="chip-tooltip">Grupo de estudiantes que ingresan al mismo tiempo a un programa académico en
+                  una
                   institución.</div>
               </div>
             </div>
@@ -330,7 +358,8 @@
           <div class="actividad-box">
             <div class="actividad-titulo">Actividad · Verdadero o Falso</div>
             <div id="vf-m1-q1">
-              <div class="pregunta">1. En Colombia, 1 de cada 4 estudiantes universitarios abandona sus estudios antes de
+              <div class="pregunta">1. En Colombia, 1 de cada 4 estudiantes universitarios abandona sus estudios antes
+                de
                 graduarse.</div>
               <div class="opciones-vf">
                 <button type="button" class="btn-opcion" onclick="verificarVF('vf-m1-q1','V','V')">Verdadero</button>
@@ -352,7 +381,19 @@
 
         <!-- Columna derecha: video fijo -->
         <div class="m1-video-col">
-          <video id="video-m1" class="modulo-video" src="videos/modulo1.mp4" controls></video>
+          <video id="video-m1" class="modulo-video" src="videos/modulo1.mp4" controls
+            aria-label="ALDO presenta el contexto y la problemática de la deserción universitaria en Colombia."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">Hola, bienvenido o bienvenida a este
+                recorrido sobre inteligencia artificial y deserción universitaria. En esta primera sección vamos a
+                dimensionar el problema. ¿Sabías que en Colombia, uno de cada cuatro estudiantes que ingresa a la
+                universidad no logra graduarse? Eso es el 24% según los datos más recientes del Ministerio de Educación.
+                No es un número abstracto: son miles de historias interrumpidas cada año. A lo largo de este ODC vas a
+                entender por qué ocurre esto, qué papel puede jugar la inteligencia artificial para prevenirlo, y cómo
+                se construyen los modelos que detectan el riesgo a tiempo. Cuando estés listo, haz clic en siguiente
+                para continuar.</span></div>
+          </details>
         </div>
 
       </div>
@@ -384,12 +425,29 @@
         <h2 class="modulo-titulo">Deserción en Colombia</h2>
       </div>
 
-      <div class="m1-layout">
+      <div class="m1-layout m1-layout-invertido">
 
-        <!-- Columna izquierda: contenido -->
+        <!-- Columna izquierda: video fijo -->
+        <div class="m1-video-col">
+          <video id="video-m2" class="modulo-video" src="videos/modulo2.mp4" controls
+            aria-label="ALDO explica los factores de deserción en Colombia y el período crítico del primer semestre."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">En esta sección vamos a ver que la
+                deserción no es un problema uniforme. Hay estudiantes que enfrentan muchos más obstáculos que otros. Los
+                datos muestran que el primer semestre es la ventana crítica: si un estudiante tiene dificultades
+                académicas en esos primeros meses, la probabilidad de que abandone se dispara. Además, la combinación de
+                pobreza, virtualidad y zona rural crea condiciones especialmente adversas. Esto nos dice algo
+                importante: necesitamos detectar el riesgo temprano, en las primeras semanas, no cuando ya es demasiado
+                tarde. En la siguiente sección veremos exactamente qué factores hay que observar.</span></div>
+          </details>
+        </div>
+
+        <!-- Columna derecha: contenido -->
         <div class="m1-contenido">
           <div class="avatar-box">
-            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div class="avatar-img">AL<div class="avatar-pulse"></div>
+            </div>
             <div>
               <div class="avatar-nombre">ALDO · Módulo 2</div>
               <div class="avatar-texto">
@@ -402,15 +460,16 @@
           <div class="card">
             <div class="card-titulo">¿Qué dice la investigación?</div>
             <p>Guerrero y Espejo (2024) evidencian que los estudiantes de estratos bajos presentan tasas de abandono
-              considerablemente más altas. En programas virtuales en zonas rurales, Aparicio-Gómez et al. (2021) reportaron
-              tasas aún más elevadas por conectividad limitada y aislamiento geográfico. Acero et al. (2019) demostraron que
-              el rendimiento en el primer semestre es el predictor más fuerte de deserción futura.</p>
+              considerablemente más altas. En programas virtuales en zonas rurales, Aparicio-Gómez et al. (2021)
+              reportaron tasas aún más elevadas por conectividad limitada y aislamiento geográfico. Acero et al. (2019)
+              demostraron que el rendimiento en el primer semestre es el predictor más fuerte de deserción futura.</p>
           </div>
 
           <div class="actividad-box">
             <div class="actividad-titulo">Actividad · Ordenar factores por nivel de riesgo</div>
             <p class="actividad-instruccion">
-              Arrastra los factores para ordenarlos de <strong>mayor a menor riesgo</strong> según la evidencia científica.
+              Arrastra los factores para ordenarlos de <strong>mayor a menor riesgo</strong> según la evidencia
+              científica.
             </p>
             <div id="drag-lista">
               <div class="drag-item" draggable="true" data-id="1">Factores psicosociales y familiares</div>
@@ -418,14 +477,10 @@
               <div class="drag-item" draggable="true" data-id="3">Modalidad virtual en zona rural</div>
               <div class="drag-item" draggable="true" data-id="4">Bajo rendimiento en primer semestre</div>
             </div>
-            <button type="button" class="btn-verificar btn-verificar-orden" onclick="verificarOrden()">Verificar orden</button>
+            <button type="button" class="btn-verificar btn-verificar-orden" onclick="verificarOrden()">Verificar
+              orden</button>
             <div class="retro" id="retro-orden"></div>
           </div>
-        </div>
-
-        <!-- Columna derecha: video fijo -->
-        <div class="m1-video-col">
-          <video id="video-m2" class="modulo-video" src="videos/modulo2.mp4" controls></video>
         </div>
 
       </div>
@@ -457,17 +512,13 @@
         <h2 class="modulo-titulo">Factores de riesgo</h2>
       </div>
 
-      <div class="m1-layout m1-layout-invertido">
+      <div class="m1-layout">
 
-        <!-- Columna izquierda: video fijo -->
-        <div class="m1-video-col">
-          <video id="video-m3" class="modulo-video" src="videos/modulo3.mp4" controls></video>
-        </div>
-
-        <!-- Columna derecha: contenido -->
+        <!-- Columna izquierda: contenido -->
         <div class="m1-contenido">
           <div class="avatar-box">
-            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div class="avatar-img">AL<div class="avatar-pulse"></div>
+            </div>
             <div>
               <div class="avatar-nombre">ALDO · Módulo 3</div>
               <div class="avatar-texto">
@@ -480,10 +531,14 @@
           <div class="card">
             <div class="card-titulo">Tres categorías de factores</div>
             <p>Los <strong>factores académicos</strong> incluyen rendimiento, asistencia y materias reprobadas. Los
-              <strong>factores socioeconómicos</strong> comprenden estrato, necesidad de trabajar y acceso a internet. Los
-              <strong>factores psicosociales</strong> abarcan apoyo familiar, motivación y salud mental. Chalela-Naffah et
-              al. (2020) demostraron que los factores psicosociales son determinantes críticos, especialmente en poblaciones
-              vulnerables.</p>
+              <strong>factores socioeconómicos</strong> comprenden estrato, necesidad de trabajar y acceso a internet.
+              Los
+              <strong>factores psicosociales</strong> abarcan apoyo familiar, motivación y salud mental. Chalela-Naffah
+              et
+              al. (2020) demostraron que los factores psicosociales son determinantes críticos, especialmente en
+              poblaciones
+              vulnerables.
+            </p>
           </div>
 
           <div class="actividad-box">
@@ -491,7 +546,8 @@
             <p class="actividad-instruccion">Arrastra cada factor a su categoría correcta.</p>
 
             <div class="drag-container">
-              <div class="drag-col" id="col-academico" ondragover="allowDrop(event)" ondrop="dropFactor(event,'academico')">
+              <div class="drag-col" id="col-academico" ondragover="allowDrop(event)"
+                ondrop="dropFactor(event,'academico')">
                 <div class="drag-col-titulo">Académico</div>
               </div>
               <div class="drag-col" id="col-socioeconomico" ondragover="allowDrop(event)"
@@ -505,17 +561,41 @@
             </div>
 
             <div id="factores-pool">
-              <div class="drag-item" draggable="true" data-cat="academico" ondragstart="dragFactor(event)">Nota parcial primer corte</div>
-              <div class="drag-item" draggable="true" data-cat="socioeconomico" ondragstart="dragFactor(event)">Necesidad de trabajar</div>
-              <div class="drag-item" draggable="true" data-cat="psicosocial" ondragstart="dragFactor(event)">Apoyo familiar</div>
-              <div class="drag-item" draggable="true" data-cat="academico" ondragstart="dragFactor(event)">Asistencia a clases</div>
-              <div class="drag-item" draggable="true" data-cat="socioeconomico" ondragstart="dragFactor(event)">Acceso a internet</div>
-              <div class="drag-item" draggable="true" data-cat="psicosocial" ondragstart="dragFactor(event)">Nivel de motivación</div>
+              <div class="drag-item" draggable="true" data-cat="academico" ondragstart="dragFactor(event)">Nota parcial
+                primer corte</div>
+              <div class="drag-item" draggable="true" data-cat="socioeconomico" ondragstart="dragFactor(event)">
+                Necesidad de trabajar</div>
+              <div class="drag-item" draggable="true" data-cat="psicosocial" ondragstart="dragFactor(event)">Apoyo
+                familiar</div>
+              <div class="drag-item" draggable="true" data-cat="academico" ondragstart="dragFactor(event)">Asistencia a
+                clases</div>
+              <div class="drag-item" draggable="true" data-cat="socioeconomico" ondragstart="dragFactor(event)">Acceso a
+                internet</div>
+              <div class="drag-item" draggable="true" data-cat="psicosocial" ondragstart="dragFactor(event)">Nivel de
+                motivación</div>
             </div>
 
-            <button type="button" class="btn-verificar btn-verificar-factores" onclick="verificarFactores()">Verificar clasificación</button>
+            <button type="button" class="btn-verificar btn-verificar-factores" onclick="verificarFactores()">Verificar
+              clasificación</button>
             <div class="retro" id="retro-factores"></div>
           </div>
+        </div>
+
+        <!-- Columna derecha: video fijo -->
+        <div class="m1-video-col">
+          <video id="video-m3" class="modulo-video" src="videos/modulo3.mp4" controls
+            aria-label="ALDO describe las tres categorías de factores de riesgo: académicos, socioeconómicos y psicosociales."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">Ahora vamos al corazón del asunto:
+                ¿qué señales nos indican que un estudiante está en riesgo? La investigación identifica tres tipos de
+                factores. Los académicos son los más visibles: notas bajas, ausencias frecuentes. Los socioeconómicos
+                nos hablan del contexto del estudiante: ¿tiene internet estable?, ¿necesita trabajar mientras estudia? Y
+                los psicosociales, que muchas veces se ignoran: ¿tiene apoyo en casa?, ¿cómo está su motivación? La
+                magia de la inteligencia artificial es que puede analizar estas tres dimensiones simultáneamente y
+                encontrar patrones que a un docente le tomaría meses detectar. Intenta la actividad de clasificación y
+                luego avanzamos.</span></div>
+          </details>
         </div>
 
       </div>
@@ -551,13 +631,26 @@
 
         <!-- Columna izquierda: video fijo -->
         <div class="m1-video-col">
-          <video id="video-m4" class="modulo-video" src="videos/modulo4.mp4" controls></video>
+          <video id="video-m4" class="modulo-video" src="videos/modulo4.mp4" controls
+            aria-label="ALDO explica cómo funciona el machine learning y los algoritmos más usados en educación."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">¿Cómo aprende una máquina a predecir
+                si un estudiante va a desertar? Imagina que tienes los registros de diez mil estudiantes de los últimos
+                cinco años: sus notas, su asistencia, su estrato, si trabajan o no, y si finalmente se graduaron o
+                abandonaron. El algoritmo analiza todos esos casos, encuentra los patrones comunes entre quienes
+                abandonaron, y construye una regla. Luego, cuando llega un estudiante nuevo con características
+                similares, el sistema calcula qué tan probable es que también abandone. No es magia, es estadística
+                avanzada. Y lo más importante: el modelo no decide nada. Solo genera una alerta para que un ser humano,
+                docente u orientador, pueda actuar. Completemos la actividad y seguimos.</span></div>
+          </details>
         </div>
 
         <!-- Columna derecha: contenido -->
         <div class="m1-contenido">
           <div class="avatar-box">
-            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div class="avatar-img">AL<div class="avatar-pulse"></div>
+            </div>
             <div>
               <div class="avatar-nombre">ALDO · Módulo 4</div>
               <div class="avatar-texto">
@@ -570,8 +663,10 @@
           <div class="card">
             <div class="card-titulo">¿Cómo funciona el machine learning?</div>
             <p>El sistema analiza datos históricos de estudiantes anteriores, encuentra patrones comunes entre quienes
-              abandonaron, y construye una regla de predicción. Cuando llega un estudiante nuevo, calcula la probabilidad de
-              abandono. Los algoritmos más usados son árboles de decisión, bosques aleatorios, redes neuronales y modelos de
+              abandonaron, y construye una regla de predicción. Cuando llega un estudiante nuevo, calcula la
+              probabilidad de
+              abandono. Los algoritmos más usados son árboles de decisión, bosques aleatorios, redes neuronales y
+              modelos de
               ensamble.</p>
           </div>
 
@@ -579,23 +674,28 @@
             <div class="card-titulo">Conceptos clave</div>
             <div class="info-chips">
               <div class="info-chip">Árbol de decisión
-                <div class="chip-tooltip">Algoritmo que divide los datos en ramas según condiciones (ej: nota menor a 3.0 → riesgo alto).</div>
+                <div class="chip-tooltip">Algoritmo que divide los datos en ramas según condiciones (ej: nota menor a
+                  3.0 → riesgo alto).</div>
               </div>
               <div class="info-chip">Bosque aleatorio
-                <div class="chip-tooltip">Combina múltiples árboles de decisión para mejorar la precisión y reducir el sobreajuste del modelo.</div>
+                <div class="chip-tooltip">Combina múltiples árboles de decisión para mejorar la precisión y reducir el
+                  sobreajuste del modelo.</div>
               </div>
               <div class="info-chip">Red neuronal
-                <div class="chip-tooltip">Inspirada en el cerebro humano, aprende representaciones complejas de los datos organizadas en capas.</div>
+                <div class="chip-tooltip">Inspirada en el cerebro humano, aprende representaciones complejas de los
+                  datos organizadas en capas.</div>
               </div>
               <div class="info-chip">Modelo de ensamble
-                <div class="chip-tooltip">Combina varios modelos distintos para obtener predicciones más robustas y precisas que cualquier modelo individual.</div>
+                <div class="chip-tooltip">Combina varios modelos distintos para obtener predicciones más robustas y
+                  precisas que cualquier modelo individual.</div>
               </div>
             </div>
           </div>
 
           <div class="actividad-box">
             <div class="actividad-titulo">Actividad · Selección múltiple</div>
-            <div class="pregunta">¿Cuál es el objetivo principal de aplicar machine learning a la deserción universitaria?</div>
+            <div class="pregunta">¿Cuál es el objetivo principal de aplicar machine learning a la deserción
+              universitaria?</div>
             <ul class="opciones-lista" id="opciones-m4">
               <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'a')">
                 <div class="opcion-letra">A</div>Reemplazar a los docentes en el proceso de evaluación
@@ -610,7 +710,8 @@
                 <div class="opcion-letra">D</div>Eliminar los factores socioeconómicos del rendimiento
               </li>
             </ul>
-            <button type="button" class="btn-verificar" onclick="verificarSM('m4','b',
+            <button type="button" class="btn-verificar"
+              onclick="verificarSM('m4','b',
               'El machine learning en educación es una herramienta de apoyo a la decisión humana. Su objetivo es detectar señales de riesgo temprano para facilitar intervenciones oportunas y personalizadas.',
               'El modelo no toma decisiones por las personas, sino que genera alertas para que docentes y orientadores actúen de manera oportuna. No reemplaza ningún proceso humano.')">Verificar</button>
             <div class="retro" id="retro-m4"></div>
@@ -647,7 +748,8 @@
       </div>
 
       <div class="avatar-box">
-        <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+        <div class="avatar-img">AL<div class="avatar-pulse"></div>
+        </div>
         <div>
           <div class="avatar-nombre">ALDO · Módulo 5</div>
           <div class="avatar-texto">
@@ -657,7 +759,19 @@
         </div>
       </div>
 
-      <video id="video-m5" class="modulo-video modulo-video-landscape" src="videos/modulo5.mp4" controls></video>
+      <video id="video-m5" class="modulo-video modulo-video-landscape" src="videos/modulo5.mp4" controls
+        aria-label="ALDO presenta la métrica AUC y la evidencia científica sobre modelos predictivos de deserción."></video>
+      <details class="transcripcion transcripcion-landscape">
+        <summary>📄 Transcripción</summary>
+        <div class="transcripcion-texto"><span class="transcripcion-diferida">En esta sección vamos a ver qué tan bien
+            funcionan estos modelos en la práctica. El indicador clave se llama AUC, que significa área bajo la curva.
+            Piénsalo así: si el modelo fuera completamente aleatorio, como lanzar una moneda, tendría AUC de 0,5. Si
+            fuera perfecto, tendría 1,0. Los mejores modelos reportados en la literatura científica alcanzan AUC de
+            0,97, lo que es extraordinariamente preciso. ¿Cómo lo logran? Combinando datos del primer mes de clases con
+            información socioeconómica y patrones de comportamiento digital. Cuántas veces entra el estudiante al campus
+            virtual, cuánto tarda en entregar una tarea, si participa en los foros. Pequeñas señales que juntas revelan
+            mucho</span></div>
+      </details>
 
       <div class="stats-grid">
         <div class="stat-card">
@@ -690,12 +804,16 @@
           para distinguir entre estudiantes en riesgo y estudiantes que continuarán sus estudios.
         </div>
         <div class="opciones-completar">
-          <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'aleatoria')">aleatoria</button>
+          <button type="button" class="btn-completar"
+            onclick="seleccionarCompletar(this,'aleatoria')">aleatoria</button>
           <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'básica')">básica</button>
-          <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'casi perfecta')">casi perfecta</button>
-          <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'insuficiente')">insuficiente</button>
+          <button type="button" class="btn-completar" onclick="seleccionarCompletar(this,'casi perfecta')">casi
+            perfecta</button>
+          <button type="button" class="btn-completar"
+            onclick="seleccionarCompletar(this,'insuficiente')">insuficiente</button>
         </div>
-        <button type="button" class="btn-verificar" onclick="verificarCompletar('casi perfecta',
+        <button type="button" class="btn-verificar"
+          onclick="verificarCompletar('casi perfecta',
           'El AUC de 0,97 sobre 1,0 posible indica una discriminación casi perfecta según Niyogisubizo et al. (2022). Es uno de los valores más altos reportados en la literatura científica sobre deserción.',
           'Recuerda: AUC de 1,0 es perfecto y 0,5 es aleatorio. Un valor de 0,97 está muy cerca del máximo, lo que indica una capacidad discriminativa extraordinaria.')">Verificar</button>
         <div class="retro" id="retro-m5"></div>
@@ -733,7 +851,8 @@
         <!-- Columna izquierda: contenido -->
         <div class="m1-contenido">
           <div class="avatar-box">
-            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div class="avatar-img">AL<div class="avatar-pulse"></div>
+            </div>
             <div>
               <div class="avatar-nombre">ALDO · Módulo 6</div>
               <div class="avatar-texto">
@@ -745,9 +864,11 @@
 
           <div class="card">
             <div class="card-titulo">Dimensiones de una implementación responsable</div>
-            <p>Una implementación responsable requiere atender tres dimensiones. <strong>Técnica:</strong> datos históricos
+            <p>Una implementación responsable requiere atender tres dimensiones. <strong>Técnica:</strong> datos
+              históricos
               de al menos 3 cohortes e infraestructura adecuada. <strong>Institucional:</strong> protocolo claro de
-              intervención (¿quién actúa?, ¿en qué plazo?). <strong>Ética:</strong> protección de datos personales, evitar
+              intervención (¿quién actúa?, ¿en qué plazo?). <strong>Ética:</strong> protección de datos personales,
+              evitar
               estigmatización y garantizar que la tecnología sirva al estudiante, no al revés.</p>
           </div>
 
@@ -755,51 +876,67 @@
             <div class="card-titulo">Riesgos éticos clave</div>
             <div class="info-chips">
               <div class="info-chip">Estigmatización
-                <div class="chip-tooltip">Etiquetar a un estudiante como "en riesgo" sin protocolo humano puede afectar su
+                <div class="chip-tooltip">Etiquetar a un estudiante como "en riesgo" sin protocolo humano puede afectar
+                  su
                   autoestima y empeorar su rendimiento.</div>
               </div>
               <div class="info-chip">Sesgos del modelo
-                <div class="chip-tooltip">Si los datos históricos tienen sesgos (ej. más deserción en estratos bajos), el
+                <div class="chip-tooltip">Si los datos históricos tienen sesgos (ej. más deserción en estratos bajos),
+                  el
                   modelo los perpetúa y amplifica.</div>
               </div>
               <div class="info-chip">Privacidad de datos
-                <div class="chip-tooltip">Los datos académicos y socioeconómicos son sensibles. Requieren protección según
+                <div class="chip-tooltip">Los datos académicos y socioeconómicos son sensibles. Requieren protección
+                  según
                   la Ley 1581 de 2012 (Colombia).</div>
               </div>
             </div>
           </div>
 
           <div class="actividad-box">
-        <div class="actividad-titulo">Actividad · Caso práctico</div>
-        <div class="pregunta">Una universidad identifica con IA a 50 estudiantes en riesgo en la primera semana del
-          semestre. ¿Cuál es la acción más apropiada?</div>
-        <ul class="opciones-lista" id="opciones-m6">
-          <li class="opcion-item" onclick="seleccionarOpcion('m6',this,'a')">
-            <div class="opcion-letra">A</div>Enviarles automáticamente un correo diciéndoles que están en riesgo de
-            desertar
-          </li>
-          <li class="opcion-item" onclick="seleccionarOpcion('m6',this,'b')">
-            <div class="opcion-letra">B</div>Compartir la lista con todos los docentes del programa sin protocolo previo
-          </li>
-          <li class="opcion-item" onclick="seleccionarOpcion('m6',this,'c')">
-            <div class="opcion-letra">C</div>Activar un protocolo de acompañamiento personalizado con orientadores
-          </li>
-          <li class="opcion-item" onclick="seleccionarOpcion('m6',this,'d')">
-            <div class="opcion-letra">D</div>Esperar a mitad de semestre para confirmar si el modelo acertó
-          </li>
-        </ul>
-        <button class="btn-verificar"
-          onclick="verificarSM('m6','c',
+            <div class="actividad-titulo">Actividad · Caso práctico</div>
+            <div class="pregunta">Una universidad identifica con IA a 50 estudiantes en riesgo en la primera semana del
+              semestre. ¿Cuál es la acción más apropiada?</div>
+            <ul class="opciones-lista" id="opciones-m6">
+              <li class="opcion-item" onclick="seleccionarOpcion('m6',this,'a')">
+                <div class="opcion-letra">A</div>Enviarles automáticamente un correo diciéndoles que están en riesgo de
+                desertar
+              </li>
+              <li class="opcion-item" onclick="seleccionarOpcion('m6',this,'b')">
+                <div class="opcion-letra">B</div>Compartir la lista con todos los docentes del programa sin protocolo
+                previo
+              </li>
+              <li class="opcion-item" onclick="seleccionarOpcion('m6',this,'c')">
+                <div class="opcion-letra">C</div>Activar un protocolo de acompañamiento personalizado con orientadores
+              </li>
+              <li class="opcion-item" onclick="seleccionarOpcion('m6',this,'d')">
+                <div class="opcion-letra">D</div>Esperar a mitad de semestre para confirmar si el modelo acertó
+              </li>
+            </ul>
+            <button class="btn-verificar"
+              onclick="verificarSM('m6','c',
         'Correcto. La IA genera la alerta, pero la intervención debe ser humana, personalizada y respetuosa. Un correo automático puede estigmatizar al estudiante y empeorar su situación.',
         'Esta acción vulnera la privacidad o genera estigmatización. El modelo es una herramienta de apoyo, no una sentencia. La intervención siempre debe ser humana y con protocolo definido.')">Verificar</button>
-        <div class="retro" id="retro-m6"></div>
-      </div>
+            <div class="retro" id="retro-m6"></div>
+          </div>
 
         </div><!-- fin m1-contenido -->
 
         <!-- Columna derecha: video -->
         <div class="m1-video-col">
-          <video id="video-m6" class="modulo-video" src="videos/modulo6.mp4" controls></video>
+          <video id="video-m6" class="modulo-video" src="videos/modulo6.mp4" controls
+            aria-label="ALDO explica las dimensiones de una implementación responsable de IA y los riesgos éticos clave."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">Llegamos al módulo final de contenido
+                y quizás al más importante. Saber construir un modelo predictivo no es suficiente. La pregunta real es:
+                ¿cómo usamos esa información de manera responsable? Un algoritmo puede equivocarse. Puede tener sesgos
+                incorporados en los datos históricos. Puede etiquetar injustamente a estudiantes de ciertos estratos o
+                regiones. Por eso, ningún sistema de alerta temprana debería funcionar sin un protocolo humano claro
+                detrás. La tecnología abre la puerta, pero es el orientador, el docente, el directivo quien debe
+                cruzarla con empatía y criterio profesional. Completa el caso práctico y luego te espero en la
+                evaluación final, donde pondremos a prueba todo lo aprendido.</span></div>
+          </details>
         </div>
 
       </div><!-- fin m1-layout -->
@@ -831,274 +968,295 @@
         <h2 class="modulo-titulo">Pon a prueba lo aprendido</h2>
       </div>
 
-      <div class="m1-layout m1-layout-centrado">
-        <div class="m1-contenido">
+      <div class="eval-layout">
+
+        <!-- Columna izquierda: video sticky -->
+        <div class="eval-video-col">
+          <video id="video-p8" class="modulo-video" src="videos/evaluacion.mp4" controls
+            aria-label="ALDO introduce la evaluación final: 8 preguntas alineadas al REA con umbral de 6 correctas."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">Llegó el momento. Tienes ocho
+                preguntas sobre todo lo que recorrimos: cifras de deserción en Colombia, factores de riesgo, machine
+                learning, métricas de precisión y uso responsable de la IA. Para aprobar necesitas al menos seis
+                respuestas correctas. Cada una tiene retroalimentación inmediata. No hay límite de tiempo. Responde la
+                primera.</span></div>
+          </details>
+        </div>
+
+        <!-- Columna derecha: avatar + progreso + preguntas -->
+        <div class="eval-main">
+
           <div class="avatar-box">
-            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div class="avatar-img">AL<div class="avatar-pulse"></div>
+            </div>
             <div>
               <div class="avatar-nombre">ALDO · Evaluación</div>
               <div class="avatar-texto">
-                Llegó el momento. Tienes 8 preguntas alineadas al REA. Necesitas responder correctamente
-                al menos 6 para aprobar. Cada pregunta tiene retroalimentación inmediata. ¡Adelante!
+                Tienes 8 preguntas alineadas al REA. Necesitas al menos 6 correctas para aprobar.
+                Cada pregunta tiene retroalimentación inmediata. ¡Adelante!
               </div>
             </div>
           </div>
-        </div>
-        <div class="m1-video-col">
-          <video id="video-p8" class="modulo-video" src="videos/evaluacion.mp4" controls></video>
-        </div>
-      </div>
 
-      <!-- Indicador de progreso de la evaluación -->
-      <div class="eval-progress" id="eval-progress">
-        <div class="eval-step activo" id="es1">1</div>
-        <div class="eval-linea"></div>
-        <div class="eval-step" id="es2">2</div>
-        <div class="eval-linea"></div>
-        <div class="eval-step" id="es3">3</div>
-        <div class="eval-linea"></div>
-        <div class="eval-step" id="es4">4</div>
-        <div class="eval-linea"></div>
-        <div class="eval-step" id="es5">5</div>
-        <div class="eval-linea"></div>
-        <div class="eval-step" id="es6">6</div>
-        <div class="eval-linea"></div>
-        <div class="eval-step" id="es7">7</div>
-        <div class="eval-linea"></div>
-        <div class="eval-step" id="es8">8</div>
-      </div>
-
-      <!-- Pregunta 1 -->
-      <div class="eval-pregunta-box activa" id="eq1">
-        <div class="actividad-box">
-          <div class="actividad-titulo">Pregunta 1 de 8</div>
-          <div class="pregunta">¿Cuál fue la tasa de deserción acumulada por cohorte en Colombia según SPADIES 2023?
+          <!-- Indicador de progreso de la evaluación -->
+          <div class="eval-progress" id="eval-progress">
+            <div class="eval-step activo" id="es1">1</div>
+            <div class="eval-linea"></div>
+            <div class="eval-step" id="es2">2</div>
+            <div class="eval-linea"></div>
+            <div class="eval-step" id="es3">3</div>
+            <div class="eval-linea"></div>
+            <div class="eval-step" id="es4">4</div>
+            <div class="eval-linea"></div>
+            <div class="eval-step" id="es5">5</div>
+            <div class="eval-linea"></div>
+            <div class="eval-step" id="es6">6</div>
+            <div class="eval-linea"></div>
+            <div class="eval-step" id="es7">7</div>
+            <div class="eval-linea"></div>
+            <div class="eval-step" id="es8">8</div>
           </div>
-          <ul class="opciones-lista" id="eq1-opts">
-            <li class="opcion-item" onclick="seleccionarOpcion('eq1',this,'a')">
-              <div class="opcion-letra">A</div>8,97%
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq1',this,'b')">
-              <div class="opcion-letra">B</div>24,15%
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq1',this,'c')">
-              <div class="opcion-letra">C</div>15,30%
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq1',this,'d')">
-              <div class="opcion-letra">D</div>31,5%
-            </li>
-          </ul>
-          <button class="btn-verificar"
-            onclick="evalVerificar(1,'b',
+
+          <!-- Pregunta 1 -->
+          <div class="eval-pregunta-box activa" id="eq1">
+            <div class="actividad-box">
+              <div class="actividad-titulo">Pregunta 1 de 8</div>
+              <div class="pregunta">¿Cuál fue la tasa de deserción acumulada por cohorte en Colombia según SPADIES 2023?
+              </div>
+              <ul class="opciones-lista" id="eq1-opts">
+                <li class="opcion-item" onclick="seleccionarOpcion('eq1',this,'a')">
+                  <div class="opcion-letra">A</div>8,97%
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq1',this,'b')">
+                  <div class="opcion-letra">B</div>24,15%
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq1',this,'c')">
+                  <div class="opcion-letra">C</div>15,30%
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq1',this,'d')">
+                  <div class="opcion-letra">D</div>31,5%
+                </li>
+              </ul>
+              <button class="btn-verificar"
+                onclick="evalVerificar(1,'b',
           'Correcto. El 24,15% es la deserción acumulada por cohorte. El 8,97% es la tasa anual, un dato diferente.',
           'La tasa de deserción acumulada por cohorte fue 24,15%, equivalente a que 1 de cada 4 estudiantes no culmina sus estudios.')">Verificar</button>
-          <div class="retro" id="retro-eq1"></div>
-        </div>
-      </div>
-
-      <!-- Pregunta 2 -->
-      <div class="eval-pregunta-box" id="eq2">
-        <div class="actividad-box">
-          <div class="actividad-titulo">Pregunta 2 de 8</div>
-          <div class="pregunta">Según Acero et al. (2019), ¿cuál es el período más crítico respecto a la deserción?
+              <div class="retro" id="retro-eq1"></div>
+            </div>
           </div>
-          <ul class="opciones-lista" id="eq2-opts">
-            <li class="opcion-item" onclick="seleccionarOpcion('eq2',this,'a')">
-              <div class="opcion-letra">A</div>El último semestre antes de graduarse
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq2',this,'b')">
-              <div class="opcion-letra">B</div>El tercer semestre de la carrera
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq2',this,'c')">
-              <div class="opcion-letra">C</div>El primer semestre de formación
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq2',this,'d')">
-              <div class="opcion-letra">D</div>El momento de la matrícula
-            </li>
-          </ul>
-          <button class="btn-verificar"
-            onclick="evalVerificar(2,'c',
+
+          <!-- Pregunta 2 -->
+          <div class="eval-pregunta-box" id="eq2">
+            <div class="actividad-box">
+              <div class="actividad-titulo">Pregunta 2 de 8</div>
+              <div class="pregunta">Según Acero et al. (2019), ¿cuál es el período más crítico respecto a la deserción?
+              </div>
+              <ul class="opciones-lista" id="eq2-opts">
+                <li class="opcion-item" onclick="seleccionarOpcion('eq2',this,'a')">
+                  <div class="opcion-letra">A</div>El último semestre antes de graduarse
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq2',this,'b')">
+                  <div class="opcion-letra">B</div>El tercer semestre de la carrera
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq2',this,'c')">
+                  <div class="opcion-letra">C</div>El primer semestre de formación
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq2',this,'d')">
+                  <div class="opcion-letra">D</div>El momento de la matrícula
+                </li>
+              </ul>
+              <button class="btn-verificar"
+                onclick="evalVerificar(2,'c',
           'Correcto. El rendimiento en el primer semestre es el predictor más fuerte de deserción futura según Acero et al. (2019).',
           'El primer semestre es la etapa más crítica. Las dificultades académicas tempranas predicen fuertemente el abandono posterior.')">Verificar</button>
-          <div class="retro" id="retro-eq2"></div>
-        </div>
-      </div>
+              <div class="retro" id="retro-eq2"></div>
+            </div>
+          </div>
 
-      <!-- Pregunta 3 -->
-      <div class="eval-pregunta-box" id="eq3">
-        <div class="actividad-box">
-          <div class="actividad-titulo">Pregunta 3 de 8</div>
-          <div class="pregunta">¿Cuáles son las tres categorías de factores de riesgo de deserción identificadas en la
-            investigación?</div>
-          <ul class="opciones-lista" id="eq3-opts">
-            <li class="opcion-item" onclick="seleccionarOpcion('eq3',this,'a')">
-              <div class="opcion-letra">A</div>Tecnológicos, administrativos y curriculares
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq3',this,'b')">
-              <div class="opcion-letra">B</div>Académicos, socioeconómicos y psicosociales
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq3',this,'c')">
-              <div class="opcion-letra">C</div>Individuales, institucionales y nacionales
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq3',this,'d')">
-              <div class="opcion-letra">D</div>Económicos, políticos y culturales
-            </li>
-          </ul>
-          <button class="btn-verificar"
-            onclick="evalVerificar(3,'b',
+          <!-- Pregunta 3 -->
+          <div class="eval-pregunta-box" id="eq3">
+            <div class="actividad-box">
+              <div class="actividad-titulo">Pregunta 3 de 8</div>
+              <div class="pregunta">¿Cuáles son las tres categorías de factores de riesgo de deserción identificadas en
+                la
+                investigación?</div>
+              <ul class="opciones-lista" id="eq3-opts">
+                <li class="opcion-item" onclick="seleccionarOpcion('eq3',this,'a')">
+                  <div class="opcion-letra">A</div>Tecnológicos, administrativos y curriculares
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq3',this,'b')">
+                  <div class="opcion-letra">B</div>Académicos, socioeconómicos y psicosociales
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq3',this,'c')">
+                  <div class="opcion-letra">C</div>Individuales, institucionales y nacionales
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq3',this,'d')">
+                  <div class="opcion-letra">D</div>Económicos, políticos y culturales
+                </li>
+              </ul>
+              <button class="btn-verificar"
+                onclick="evalVerificar(3,'b',
           'Perfecto. Académicos (notas, asistencia), socioeconómicos (estrato, trabajo) y psicosociales (apoyo familiar, motivación) son las tres grandes categorías.',
           'Las tres categorías son: académicos, socioeconómicos y psicosociales. Un modelo efectivo debe incluir variables de las tres para ser preciso.')">Verificar</button>
-          <div class="retro" id="retro-eq3"></div>
-        </div>
-      </div>
+              <div class="retro" id="retro-eq3"></div>
+            </div>
+          </div>
 
-      <!-- Pregunta 4 -->
-      <div class="eval-pregunta-box" id="eq4">
-        <div class="actividad-box">
-          <div class="actividad-titulo">Pregunta 4 de 8</div>
-          <div class="pregunta">¿Qué significa un AUC de 0,5 en un modelo predictivo?</div>
-          <ul class="opciones-lista" id="eq4-opts">
-            <li class="opcion-item" onclick="seleccionarOpcion('eq4',this,'a')">
-              <div class="opcion-letra">A</div>El modelo es perfecto
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq4',this,'b')">
-              <div class="opcion-letra">B</div>El modelo predice igual que el azar
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq4',this,'c')">
-              <div class="opcion-letra">C</div>El modelo tiene precisión del 50% en datos nuevos
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq4',this,'d')">
-              <div class="opcion-letra">D</div>El modelo necesita más datos para funcionar
-            </li>
-          </ul>
-          <button class="btn-verificar"
-            onclick="evalVerificar(4,'b',
+          <!-- Pregunta 4 -->
+          <div class="eval-pregunta-box" id="eq4">
+            <div class="actividad-box">
+              <div class="actividad-titulo">Pregunta 4 de 8</div>
+              <div class="pregunta">¿Qué significa un AUC de 0,5 en un modelo predictivo?</div>
+              <ul class="opciones-lista" id="eq4-opts">
+                <li class="opcion-item" onclick="seleccionarOpcion('eq4',this,'a')">
+                  <div class="opcion-letra">A</div>El modelo es perfecto
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq4',this,'b')">
+                  <div class="opcion-letra">B</div>El modelo predice igual que el azar
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq4',this,'c')">
+                  <div class="opcion-letra">C</div>El modelo tiene precisión del 50% en datos nuevos
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq4',this,'d')">
+                  <div class="opcion-letra">D</div>El modelo necesita más datos para funcionar
+                </li>
+              </ul>
+              <button class="btn-verificar"
+                onclick="evalVerificar(4,'b',
           'Correcto. AUC de 0,5 equivale a predecir al azar, como lanzar una moneda. AUC de 1,0 sería perfecto y 0,97 es casi perfecto.',
           'AUC de 0,5 significa que el modelo no discrimina mejor que el azar. El rango útil está entre 0,7 y 1,0.')">Verificar</button>
-          <div class="retro" id="retro-eq4"></div>
-        </div>
-      </div>
+              <div class="retro" id="retro-eq4"></div>
+            </div>
+          </div>
 
-      <!-- Pregunta 5 -->
-      <div class="eval-pregunta-box" id="eq5">
-        <div class="actividad-box">
-          <div class="actividad-titulo">Pregunta 5 de 8</div>
-          <div class="pregunta">¿Qué valor de AUC reportaron Niyogisubizo et al. (2022) con su modelo de ensamble?</div>
-          <ul class="opciones-lista" id="eq5-opts">
-            <li class="opcion-item" onclick="seleccionarOpcion('eq5',this,'a')">
-              <div class="opcion-letra">A</div>Superior a 0,70
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq5',this,'b')">
-              <div class="opcion-letra">B</div>Superior a 0,85
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq5',this,'c')">
-              <div class="opcion-letra">C</div>Superior a 0,97
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq5',this,'d')">
-              <div class="opcion-letra">D</div>Superior a 0,60
-            </li>
-          </ul>
-          <button class="btn-verificar"
-            onclick="evalVerificar(5,'c',
+          <!-- Pregunta 5 -->
+          <div class="eval-pregunta-box" id="eq5">
+            <div class="actividad-box">
+              <div class="actividad-titulo">Pregunta 5 de 8</div>
+              <div class="pregunta">¿Qué valor de AUC reportaron Niyogisubizo et al. (2022) con su modelo de ensamble?
+              </div>
+              <ul class="opciones-lista" id="eq5-opts">
+                <li class="opcion-item" onclick="seleccionarOpcion('eq5',this,'a')">
+                  <div class="opcion-letra">A</div>Superior a 0,70
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq5',this,'b')">
+                  <div class="opcion-letra">B</div>Superior a 0,85
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq5',this,'c')">
+                  <div class="opcion-letra">C</div>Superior a 0,97
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq5',this,'d')">
+                  <div class="opcion-letra">D</div>Superior a 0,60
+                </li>
+              </ul>
+              <button class="btn-verificar"
+                onclick="evalVerificar(5,'c',
           'Excelente. El modelo de ensamble de dos capas de Niyogisubizo et al. (2022) alcanzó AUC superior a 0,97.',
           'El valor correcto es superior a 0,97, reportado por Niyogisubizo et al. (2022) usando un modelo de ensamble de dos capas.')">Verificar</button>
-          <div class="retro" id="retro-eq5"></div>
-        </div>
-      </div>
+              <div class="retro" id="retro-eq5"></div>
+            </div>
+          </div>
 
-      <!-- Pregunta 6 -->
-      <div class="eval-pregunta-box" id="eq6">
-        <div class="actividad-box">
-          <div class="actividad-titulo">Pregunta 6 de 8</div>
-          <div class="pregunta">Según Chalela-Naffah et al. (2020), ¿qué tipo de factores son determinantes críticos en
-            poblaciones vulnerables?</div>
-          <ul class="opciones-lista" id="eq6-opts">
-            <li class="opcion-item" onclick="seleccionarOpcion('eq6',this,'a')">
-              <div class="opcion-letra">A</div>Factores tecnológicos
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq6',this,'b')">
-              <div class="opcion-letra">B</div>Factores psicosociales y familiares
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq6',this,'c')">
-              <div class="opcion-letra">C</div>Factores curriculares
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq6',this,'d')">
-              <div class="opcion-letra">D</div>Factores administrativos
-            </li>
-          </ul>
-          <button class="btn-verificar"
-            onclick="evalVerificar(6,'b',
+          <!-- Pregunta 6 -->
+          <div class="eval-pregunta-box" id="eq6">
+            <div class="actividad-box">
+              <div class="actividad-titulo">Pregunta 6 de 8</div>
+              <div class="pregunta">Según Chalela-Naffah et al. (2020), ¿qué tipo de factores son determinantes críticos
+                en
+                poblaciones vulnerables?</div>
+              <ul class="opciones-lista" id="eq6-opts">
+                <li class="opcion-item" onclick="seleccionarOpcion('eq6',this,'a')">
+                  <div class="opcion-letra">A</div>Factores tecnológicos
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq6',this,'b')">
+                  <div class="opcion-letra">B</div>Factores psicosociales y familiares
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq6',this,'c')">
+                  <div class="opcion-letra">C</div>Factores curriculares
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq6',this,'d')">
+                  <div class="opcion-letra">D</div>Factores administrativos
+                </li>
+              </ul>
+              <button class="btn-verificar"
+                onclick="evalVerificar(6,'b',
           'Correcto. Chalela-Naffah et al. (2020) evidenciaron que los factores psicosociales y familiares son determinantes críticos en contextos de países en desarrollo.',
           'Los factores psicosociales y familiares son los determinantes críticos según Chalela-Naffah et al. (2020), especialmente en poblaciones vulnerables.')">Verificar</button>
-          <div class="retro" id="retro-eq6"></div>
-        </div>
-      </div>
+              <div class="retro" id="retro-eq6"></div>
+            </div>
+          </div>
 
-      <!-- Pregunta 7 -->
-      <div class="eval-pregunta-box" id="eq7">
-        <div class="actividad-box">
-          <div class="actividad-titulo">Pregunta 7 de 8</div>
-          <div class="pregunta">¿Qué riesgo ético principal surge al implementar un sistema de alerta temprana sin
-            protocolo humano?</div>
-          <ul class="opciones-lista" id="eq7-opts">
-            <li class="opcion-item" onclick="seleccionarOpcion('eq7',this,'a')">
-              <div class="opcion-letra">A</div>Que el modelo sea demasiado preciso
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq7',this,'b')">
-              <div class="opcion-letra">B</div>Estigmatización y vulneración de la privacidad del estudiante
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq7',this,'c')">
-              <div class="opcion-letra">C</div>Que aumente el costo operativo de la institución
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq7',this,'d')">
-              <div class="opcion-letra">D</div>Que los docentes pierdan autoridad académica
-            </li>
-          </ul>
-          <button class="btn-verificar"
-            onclick="evalVerificar(7,'b',
+          <!-- Pregunta 7 -->
+          <div class="eval-pregunta-box" id="eq7">
+            <div class="actividad-box">
+              <div class="actividad-titulo">Pregunta 7 de 8</div>
+              <div class="pregunta">¿Qué riesgo ético principal surge al implementar un sistema de alerta temprana sin
+                protocolo humano?</div>
+              <ul class="opciones-lista" id="eq7-opts">
+                <li class="opcion-item" onclick="seleccionarOpcion('eq7',this,'a')">
+                  <div class="opcion-letra">A</div>Que el modelo sea demasiado preciso
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq7',this,'b')">
+                  <div class="opcion-letra">B</div>Estigmatización y vulneración de la privacidad del estudiante
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq7',this,'c')">
+                  <div class="opcion-letra">C</div>Que aumente el costo operativo de la institución
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq7',this,'d')">
+                  <div class="opcion-letra">D</div>Que los docentes pierdan autoridad académica
+                </li>
+              </ul>
+              <button class="btn-verificar"
+                onclick="evalVerificar(7,'b',
           'Exacto. Sin protocolo humano, el sistema puede estigmatizar al estudiante, vulnerar su privacidad y generar efectos contrarios al objetivo de retención.',
           'El riesgo principal es la estigmatización y vulneración de privacidad. La IA debe apoyar decisiones humanas, no reemplazarlas ni actuar automáticamente sobre las personas.')">Verificar</button>
-          <div class="retro" id="retro-eq7"></div>
-        </div>
-      </div>
+              <div class="retro" id="retro-eq7"></div>
+            </div>
+          </div>
 
-      <!-- Pregunta 8 -->
-      <div class="eval-pregunta-box" id="eq8">
-        <div class="actividad-box">
-          <div class="actividad-titulo">Pregunta 8 de 8</div>
-          <div class="pregunta">¿Cuál de las siguientes afirmaciones describe mejor el papel de la IA en la prevención
-            de la deserción?</div>
-          <ul class="opciones-lista" id="eq8-opts">
-            <li class="opcion-item" onclick="seleccionarOpcion('eq8',this,'a')">
-              <div class="opcion-letra">A</div>La IA reemplaza el juicio del docente y el orientador
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq8',this,'b')">
-              <div class="opcion-letra">B</div>La IA garantiza que ningún estudiante deserte
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq8',this,'c')">
-              <div class="opcion-letra">C</div>La IA genera alertas tempranas que facilitan intervenciones humanas
-              oportunas
-            </li>
-            <li class="opcion-item" onclick="seleccionarOpcion('eq8',this,'d')">
-              <div class="opcion-letra">D</div>La IA solo funciona con datos de estudiantes graduados
-            </li>
-          </ul>
-          <button class="btn-verificar"
-            onclick="evalVerificar(8,'c',
+          <!-- Pregunta 8 -->
+          <div class="eval-pregunta-box" id="eq8">
+            <div class="actividad-box">
+              <div class="actividad-titulo">Pregunta 8 de 8</div>
+              <div class="pregunta">¿Cuál de las siguientes afirmaciones describe mejor el papel de la IA en la
+                prevención
+                de la deserción?</div>
+              <ul class="opciones-lista" id="eq8-opts">
+                <li class="opcion-item" onclick="seleccionarOpcion('eq8',this,'a')">
+                  <div class="opcion-letra">A</div>La IA reemplaza el juicio del docente y el orientador
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq8',this,'b')">
+                  <div class="opcion-letra">B</div>La IA garantiza que ningún estudiante deserte
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq8',this,'c')">
+                  <div class="opcion-letra">C</div>La IA genera alertas tempranas que facilitan intervenciones humanas
+                  oportunas
+                </li>
+                <li class="opcion-item" onclick="seleccionarOpcion('eq8',this,'d')">
+                  <div class="opcion-letra">D</div>La IA solo funciona con datos de estudiantes graduados
+                </li>
+              </ul>
+              <button class="btn-verificar"
+                onclick="evalVerificar(8,'c',
           'Perfecto. La IA es una herramienta de apoyo: detecta señales de riesgo y genera alertas para que los equipos humanos actúen de manera oportuna y personalizada.',
           'La IA genera alertas tempranas que facilitan intervenciones humanas. No reemplaza el juicio profesional ni garantiza resultados por sí sola.')">Verificar</button>
-          <div class="retro" id="retro-eq8"></div>
-        </div>
-      </div>
+              <div class="retro" id="retro-eq8"></div>
+            </div>
+          </div>
 
-      <!-- Resultado final -->
-      <div class="eval-pregunta-box" id="eq-resultado">
-        <div class="resultado-final">
-          <div class="resultado-score" id="resultado-score"></div>
-          <div class="resultado-msg" id="resultado-msg"></div>
-          <button class="btn-iniciar btn-iniciar-centrado" onclick="irA(9)">Ver conclusión →</button>
-        </div>
-      </div>
+          <!-- Resultado final -->
+          <div class="eval-pregunta-box" id="eq-resultado">
+            <div class="resultado-final">
+              <div class="resultado-score" id="resultado-score"></div>
+              <div class="resultado-msg" id="resultado-msg"></div>
+              <button class="btn-iniciar btn-iniciar-centrado" onclick="irA(9)">Ver conclusión →</button>
+            </div>
+          </div>
+
+        </div><!-- fin eval-main -->
+
+      </div><!-- fin eval-layout -->
 
     </div>
     <div class="nav-bottom">
@@ -1127,13 +1285,14 @@
         <h2 class="modulo-titulo">Lo que aprendiste y los siguientes pasos</h2>
       </div>
 
-      <div class="m1-layout m1-layout-invertido m1-layout-centrado">
-        <div class="m1-video-col">
-          <video id="video-p9" class="modulo-video" src="videos/conclusiones.mp4" controls></video>
-        </div>
-        <div class="m1-contenido">
+      <div class="eval-layout eval-layout-invertido">
+
+        <!-- Columna izquierda: avatar + síntesis + siguientes pasos -->
+        <div class="eval-main">
+
           <div class="avatar-box">
-            <div class="avatar-img">AL<div class="avatar-pulse"></div></div>
+            <div class="avatar-img">AL<div class="avatar-pulse"></div>
+            </div>
             <div>
               <div class="avatar-nombre">ALDO · Cierre</div>
               <div class="avatar-texto">
@@ -1143,78 +1302,104 @@
               </div>
             </div>
           </div>
+
+          <div class="card">
+            <div class="card-titulo">Síntesis del recorrido</div>
+            <ul class="checklist">
+              <li>
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>
+                Colombia tiene una deserción acumulada del 24,15% — uno de cada cuatro estudiantes no se gradúa
+                (SPADIES,
+                2023).
+              </li>
+              <li>
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>
+                El primer semestre es la ventana crítica: el rendimiento temprano predice fuertemente el abandono
+                futuro.
+              </li>
+              <li>
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>
+                Los factores de riesgo son académicos, socioeconómicos y psicosociales — un buen modelo usa los tres.
+              </li>
+              <li>
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>
+                Los modelos de IA alcanzan AUC superiores a 0,97 — una capacidad discriminativa casi perfecta.
+              </li>
+              <li>
+                <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+                    aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></div>
+                La implementación responsable combina precisión técnica con protocolos humanos de acompañamiento.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card card-oscuro">
+            <div class="card-titulo">Siguientes pasos sugeridos</div>
+            <ul class="checklist">
+              <li>
+                <div class="check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#00482B" stroke-width="3" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="texto-blanco">Revisar el sistema SPADIES de tu institución y explorar los datos disponibles
+                  de
+                  deserción.</span>
+              </li>
+              <li>
+                <div class="check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#00482B" stroke-width="3" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="texto-blanco">Identificar qué variables académicas, socioeconómicas y psicosociales
+                  registra tu
+                  institución.</span>
+              </li>
+              <li>
+                <div class="check-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#00482B" stroke-width="3" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="texto-blanco">Proponer un protocolo de intervención humana antes de implementar cualquier
+                  sistema de alerta.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div><!-- fin eval-main -->
+
+        <!-- Columna derecha: video sticky -->
+        <div class="eval-video-col">
+          <video id="video-p9" class="modulo-video" src="videos/conclusiones.mp4" controls
+            aria-label="ALDO presenta la síntesis del recorrido y los siguientes pasos sugeridos."></video>
+          <details class="transcripcion">
+            <summary>📄 Transcripción</summary>
+            <div class="transcripcion-texto"><span class="transcripcion-diferida">Llegaste al final. Recorriste uno de
+                los problemas más críticos de la educación superior colombiana: uno de cada cuatro estudiantes no se
+                gradúa. Exploraste cómo la inteligencia artificial puede cambiar esa realidad. Recuerda: los modelos son
+                herramientas poderosas, pero la intervención debe ser humana, oportuna y respetuosa. La tecnología abre
+                la puerta, tú la cruzas con empatía. Revisa los datos de tu institución, identifica variables
+                disponibles y diseña un protocolo de acompañamiento. Gracias.</span></div>
+          </details>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="card-titulo">Síntesis del recorrido</div>
-        <ul class="checklist">
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
-                <polyline points="20 6 9 17 4 12" />
-              </svg></div>
-            Colombia tiene una deserción acumulada del 24,15% — uno de cada cuatro estudiantes no se gradúa (SPADIES,
-            2023).
-          </li>
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
-                <polyline points="20 6 9 17 4 12" />
-              </svg></div>
-            El primer semestre es la ventana crítica: el rendimiento temprano predice fuertemente el abandono futuro.
-          </li>
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
-                <polyline points="20 6 9 17 4 12" />
-              </svg></div>
-            Los factores de riesgo son académicos, socioeconómicos y psicosociales — un buen modelo usa los tres.
-          </li>
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
-                <polyline points="20 6 9 17 4 12" />
-              </svg></div>
-            Los modelos de IA alcanzan AUC superiores a 0,97 — una capacidad discriminativa casi perfecta.
-          </li>
-          <li>
-            <div class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
-                <polyline points="20 6 9 17 4 12" />
-              </svg></div>
-            La implementación responsable combina precisión técnica con protocolos humanos de acompañamiento.
-          </li>
-        </ul>
-      </div>
-
-      <div class="card card-oscuro">
-        <div class="card-titulo">Siguientes pasos sugeridos</div>
-        <ul class="checklist">
-          <li>
-            <div class="check-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#00482B" stroke-width="3">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <span class="texto-blanco">Revisar el sistema SPADIES de tu institución y explorar los datos disponibles de
-              deserción.</span>
-          </li>
-          <li>
-            <div class="check-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#00482B" stroke-width="3">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <span class="texto-blanco">Identificar qué variables académicas, socioeconómicas y psicosociales registra tu
-              institución.</span>
-          </li>
-          <li>
-            <div class="check-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#00482B" stroke-width="3">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <span class="texto-blanco">Proponer un protocolo de intervención humana antes de implementar cualquier
-              sistema de alerta.</span>
-          </li>
-        </ul>
-      </div>
+      </div><!-- fin eval-layout -->
 
     </div>
     <div class="nav-bottom">
@@ -1240,40 +1425,99 @@
 
       <div class="modulo-header">
         <div class="modulo-tag">Referencias</div>
-        <h2 class="modulo-titulo">Fuentes bibliográficas APA 7</h2>
+        <h2 class="modulo-titulo">Fuentes bibliográficas</h2>
       </div>
 
       <div class="card">
-        <div class="card-titulo">Referencias principales del ODC</div>
+        <div class="card-titulo">Referencias bibliográficas</div>
         <ul class="ref-list">
-          <li class="ref-item">Acero, A., Achury, J. C., & Morales, J. C. (2019). University dropout: A prediction model
-            for an engineering program in Bogotá, Colombia. <em>Proceedings of the 8th Research in Engineering Education
-              Symposium (REES 2019)</em>, 483–490.</li>
+          <li class="ref-item">Acero López, A. E., Achury, J. C., & Morales, J. C. (2019). University dropout: A
+            prediction model for an engineering program in Bogotá, Colombia. <em>Proceedings of the 8th Research in
+              Engineering Education Symposium (REES 2019)</em>, 483–490.</li>
+          <li class="ref-item">Adekitan, A. I., & Salau, O. (2019). The impact of engineering students' performance in
+            the first three years on their graduation result using educational data mining. <em>Heliyon, 5</em>(2),
+            e01250. https://doi.org/10.1016/j.heliyon.2019.e01250</li>
           <li class="ref-item">Aparicio-Gómez, O. Y., Aparicio-Gómez, W. O., & Ostos-Ortiz, O. L. (2021). Rurality and
             dropout in virtual higher education programmes in Colombia. <em>Sustainability, 13</em>(9), 4953.
             https://doi.org/10.3390/su13094953</li>
+          <li class="ref-item">Baranyi, M., Nagy, M., & Molontay, R. (2020). Interpretable deep learning for university
+            dropout prediction. <em>Proceedings of the 21st Annual Conference on Information Technology Education
+              (SIGITE 2020)</em>, 13–19. https://doi.org/10.1145/3368308.3415382</li>
+          <li class="ref-item">Berens, J., Schneider, K., Görtz, S., Oster, S., & Burghoff, J. (2019). Early detection
+            of students at risk: Predicting student dropouts using administrative student data from German universities
+            and machine learning methods. <em>Journal of Educational Data Mining, 11</em>(3), 1–41.
+            https://doi.org/10.5281/zenodo.3554645</li>
+          <li class="ref-item">Burgos, C., Campanario, M. L., de la Peña, D., Lara, J. A., Lizcano, D., & Martínez, M.
+            A. (2018). Data mining for modeling students' performance: A tutoring action plan to prevent academic
+            dropout. <em>Computers & Electrical Engineering, 66</em>, 541–556.
+            https://doi.org/10.1016/j.compeleceng.2017.03.005</li>
           <li class="ref-item">Chalela-Naffah, S., Valencia-Arias, A., Ruiz-Rojas, G. A., & Cadavid-Orrego, M. (2020).
             Psycho-social and familial factors influencing drop-out rates among university students in the context of
             developing countries. <em>Revista Lasallista de Investigación, 17</em>(1), 103–115.</li>
+          <li class="ref-item">Cornejo-Aparicio, M., Flores-Fuentes, A. A., Villanueva-Llerena, M., & Talavera-Mendoza,
+            F. (2023). Model for the prediction of dropout in higher education in Peru applying machine learning
+            algorithms. <em>Conference of Open Innovation Association FRUCT, 2023-May</em>, 116–124.</li>
+          <li class="ref-item">Fernández-García, A. J., Preciado, J. C., Melchor, F., Rodriguez-Echeverria, R.,
+            Conejero, J. M., & Sánchez-Figueroa, F. (2021). A real-life machine learning experience for predicting
+            university dropout at different stages using academic data. <em>IEEE Access, 9</em>, 133076–133090.
+            https://doi.org/10.1109/ACCESS.2021.3115851</li>
+          <li class="ref-item">Flores, V., Heras, S., & Julián, V. (2022). Comparison of predictive models with balanced
+            classes using the SMOTE method for the forecast of student dropout in higher education. <em>Electronics,
+              11</em>(3), 457. https://doi.org/10.3390/electronics11030457</li>
           <li class="ref-item">Guerrero, S. C., & Espejo, R. L. (2024). University dropout: Comparative study between
             Colombia and Spain from a gender perspective. <em>Formación Universitaria, 17</em>(2), 101–112.
             https://doi.org/10.4067/S0718-50062024000200101</li>
+          <li class="ref-item">Kemper, L., Vorhoff, G., & Wigger, B. U. (2020). Predicting student dropout: A machine
+            learning approach. <em>European Journal of Higher Education, 10</em>(1), 28–47.
+            https://doi.org/10.1080/21568235.2020.1718520</li>
+          <li class="ref-item">Martins, M. V., Tolledo, D., Machado, J., Baptista, L. M. T., & Realinho, V. (2021).
+            Early prediction of student's performance in higher education: A case study. <em>Trends and Applications in
+              Information Systems and Technologies</em>, 166–175. https://doi.org/10.1007/978-3-030-72657-7_16</li>
           <li class="ref-item">Ministerio de Educación Nacional. (2024). <em>Sistema para la prevención de la deserción
               de la educación superior (SPADIES)</em>. https://www.mineducacion.gov.co/sistemasinfo/spadies/</li>
+          <li class="ref-item">Mubarak, A. A., Cao, H., & Zhang, W. (2022). Prediction of students' early dropout based
+            on their interaction logs in online learning environment. <em>Interactive Learning Environments, 30</em>(8),
+            1414–1433. https://doi.org/10.1080/17474210.2020.1727529</li>
           <li class="ref-item">Niyogisubizo, J., Liao, L., Nziyumva, E., Murwanashyaka, E., & Nshimyumukiza, P. C.
             (2022). Predicting student's dropout in university classes using a two-layer ensemble machine learning
             approach. <em>Computers and Education: Artificial Intelligence, 3</em>, 100066.
             https://doi.org/10.1016/j.caeai.2022.100066</li>
+          <li class="ref-item">Palacio-Niño, J. O., & Berzal, F. (2019). Dropout prediction in a Latin American
+            university: A case study. <em>Revista Electrónica Educare, 23</em>(1). https://doi.org/10.15359/ree.23-1.17
+          </li>
+          <li class="ref-item">Pérez, B., Castellanos, C., & Correal, D. (2020). Applying data mining techniques to
+            predict student dropout: A case study with high-school students. <em>IEEE SmartWorld</em>.
+            https://doi.org/10.1109/SmartWorld-UIC-ATC-SCALCOM-IOP-SCI.2019.00220</li>
+          <li class="ref-item">Romero, C., & Ventura, S. (2020). Educational data mining and learning analytics: An
+            updated survey. <em>Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 10</em>(3), e1355.
+            https://doi.org/10.1002/widm.1355</li>
+          <li class="ref-item">Villagrán-Vizcaíno, R., Piedra, L., Chicaiza, J., & Tovar-Caro, E. (2023). Supporting
+            decision-making process on higher education dropout by analyzing academic, socioeconomic, and equity factors
+            through machine learning and survival analysis methods in the Latin American context. <em>Education
+              Sciences, 13</em>(2), 154. https://doi.org/10.3390/educsci13020154</li>
+          <li class="ref-item">Villar, A., & de Andrade, C. R. V. (2024). Supervised machine learning algorithms for
+            predicting student dropout and academic success: A comparative study. <em>Discover Artificial Intelligence,
+              4</em>, 2. https://doi.org/10.1007/s44163-023-00079-z</li>
+          <li class="ref-item">Zolfaghari, M., & Amini, A. (2022). Social integration in university during the pandemic:
+            Predictors of dropout intention in first-year students. <em>Revista de la Educación Superior, 51</em>(204),
+            101–116. https://doi.org/10.36857/resu.2022.204.2091</li>
         </ul>
       </div>
 
       <div class="card">
-        <div class="card-titulo">Referencias complementarias</div>
-        <p class="ref-placeholder">
-          Agrega aquí las 14+ referencias adicionales de tu matriz de revisión bibliográfica en formato APA 7.
-          Recuerda incluir también las fuentes de imágenes, íconos, tipografías y recursos multimedia utilizados.
-          El mínimo requerido es 20 referencias en total.
-        </p>
+        <div class="card-titulo">Recursos digitales y multimedia</div>
+        <ul class="ref-list">
+          <li class="ref-item">Google LLC. (2024). <em>Sora &amp; DM Sans</em> [Tipografías web]. Google Fonts.
+            https://fonts.google.com — <span class="tasl">Título: Sora &amp; DM Sans · Autor: Google LLC · Fuente:
+              fonts.google.com · Licencia: SIL Open Font License 1.1</span></li>
+          <li class="ref-item">HeyGen Inc. (2024). <em>HeyGen</em> [Plataforma de generación de avatares y videos con
+            IA]. https://www.heygen.com — <span class="tasl">Título: ALDO (avatar personalizado) · Autor: Germán A.
+              Balaguera Pinzón vía HeyGen · Fuente: heygen.com · Licencia: Uso educativo bajo términos de HeyGen</span>
+          </li>
+          <li class="ref-item">Creative Commons. (2024). <em>Licencia Creative Commons Atribución 4.0 Internacional (CC
+              BY 4.0)</em>. https://creativecommons.org/licenses/by/4.0/ — <span class="tasl">Título: CC BY 4.0 · Autor:
+              Creative Commons · Fuente: creativecommons.org · Licencia: Dominio público</span></li>
+        </ul>
       </div>
 
     </div>
@@ -1306,19 +1550,19 @@
       <div class="creditos-grid">
         <div class="credito-card">
           <div class="credito-rol">Autoría y contenido</div>
-          <div class="credito-nombre">[Tu nombre aquí]</div>
+          <div class="credito-nombre">Germán Andrés Balaguera Pinzón</div>
         </div>
         <div class="credito-card">
           <div class="credito-rol">Diseño instruccional</div>
-          <div class="credito-nombre">[Nombre]</div>
+          <div class="credito-nombre">Jhondert Alberto Jaimes Rodríguez</div>
         </div>
         <div class="credito-card">
-          <div class="credito-rol">Voz del avatar ALDO</div>
-          <div class="credito-nombre">[Tu voz / ElevenLabs]</div>
+          <div class="credito-rol">Avatar y voz de ALDO</div>
+          <div class="credito-nombre">HeyGen · Avatar personalizado</div>
         </div>
         <div class="credito-card">
           <div class="credito-rol">Desarrollo HTML5/CSS/JS</div>
-          <div class="credito-nombre">Claude · Anthropic</div>
+          <div class="credito-nombre">Germán Andrés Balaguera Pinzón</div>
         </div>
         <div class="credito-card">
           <div class="credito-rol">Institución</div>
@@ -1326,7 +1570,7 @@
         </div>
         <div class="credito-card">
           <div class="credito-rol">Versión</div>
-          <div class="credito-nombre">1.0 · 2025</div>
+          <div class="credito-nombre">1.0 · 2026</div>
         </div>
       </div>
 
