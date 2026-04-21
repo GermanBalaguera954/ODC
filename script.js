@@ -52,9 +52,7 @@ function reproducirVideoModulo(n) {
   const video = document.getElementById(videos[n]);
   if (!video) return;
   videoTimer = setTimeout(() => {
-    video.play()
-      .then(() => { video.muted = false; })
-      .catch(() => { });
+    video.play().catch(() => { });
   }, 1500);
 }
 
