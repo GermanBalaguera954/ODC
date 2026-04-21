@@ -360,7 +360,7 @@ body {
 .transcripcion-diferida {
     color: var(--naranja);
     font-style: italic;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .meta-chip {
