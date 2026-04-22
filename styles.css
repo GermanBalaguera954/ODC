@@ -32,6 +32,7 @@ Versión: 1.0 | 2025
 *,
 *::before,
 *::after {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
@@ -1478,13 +1479,193 @@ body {
 	margin-bottom: 0;
 }
 
-@media (max-width: 700px) {
-	.m1-layout {
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — MEDIA QUERIES
+   ═══════════════════════════════════════════════════════ */
+
+/* ── TABLET (≤ 900px) ── */
+@media (max-width: 900px) {
+	/* Layouts de dos columnas → una columna */
+	.portada-hero-layout,
+	.m1-layout,
+	.m1-layout-invertido,
+	.m1-layout-landscape,
+	.eval-layout,
+	.eval-layout-invertido {
 		grid-template-columns: 1fr;
 	}
 
-	.m1-video-col {
+	/* Videos dejan de ser sticky */
+	.m1-video-col,
+	.eval-video-col {
 		position: static;
+	}
+
+	/* Orden visual: contenido primero, video después */
+	.m1-layout .m1-video-col { order: 2; }
+	.m1-layout .m1-contenido { order: 1; }
+
+	/* Videos centrados con ancho máximo */
+	.modulo-video {
+		display: block;
+		width: 100%;
+		max-width: 380px;
+		margin: 0 auto;
+	}
+
+	.modulo-video-landscape {
+		display: block;
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.modulo-video-mini {
+		display: block;
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	/* Transcripciones al ancho completo */
+	.transcripcion-landscape {
+		width: 100%;
+	}
+
+	/* Portada */
+	.portada-hero {
+		padding: 32px 24px;
+	}
+
+	/* Contenido */
+	.contenido {
+		padding: 20px 16px 18px;
+	}
+
+	/* Menú lateral en móvil */
+	.menu-panel {
+		width: 90%;
+		max-width: 340px;
+	}
+}
+
+/* ── MÓVIL GRANDE (≤ 640px) ── */
+@media (max-width: 640px) {
+	/* Topbar */
+	.topbar {
+		padding: 10px 16px;
+	}
+
+	.topbar-num {
+		display: none;
+	}
+
+	/* Contenido */
+	.contenido {
+		padding: 16px 14px 14px;
+	}
+
+	/* Portada hero */
+	.portada-hero {
+		padding: 26px 18px;
+	}
+
+	.portada-subtitulo {
+		font-size: 14px;
+	}
+
+	/* Barra de navegación inferior */
+	.nav-bottom {
+		padding: 10px 14px;
+	}
+
+	.btn-nav {
+		font-size: 12px;
+		padding: 8px 16px;
+	}
+
+	/* Stats en dos columnas */
+	.stats-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/* Drag & drop en columna */
+	.drag-container {
+		flex-direction: column;
+	}
+
+	/* Botones V/F en columna */
+	.opciones-vf {
+		flex-direction: column;
+	}
+
+	.opcion-vf {
+		justify-content: center;
+	}
+
+	/* Eval progress compacto */
+	.eval-progress {
+		flex-wrap: wrap;
+		gap: 6px;
+	}
+}
+
+/* ── MÓVIL PEQUEÑO (≤ 420px) ── */
+@media (max-width: 420px) {
+	/* Topbar más compacto */
+	.topbar-logo {
+		font-size: 11px;
+	}
+
+	.btn-menu {
+		font-size: 11px;
+		padding: 5px 10px;
+	}
+
+	/* Portada */
+	.portada-hero {
+		padding: 20px 14px;
+	}
+
+	.portada-autor {
+		font-size: 14px;
+	}
+
+	/* Navegación */
+	.nav-bottom {
+		gap: 6px;
+		padding: 8px 10px;
+	}
+
+	.btn-nav {
+		font-size: 11px;
+		padding: 7px 12px;
+		gap: 4px;
+	}
+
+	/* Stats */
+	.stat-num {
+		font-size: 24px;
+	}
+
+	.stat-label {
+		font-size: 10px;
+	}
+
+	/* Tarjetas */
+	.card {
+		padding: 14px;
+	}
+
+	/* Chips de info */
+	.info-chip {
+		font-size: 11px;
+		padding: 4px 10px 4px 8px;
+	}
+
+	/* Módulo encabezado */
+	.modulo-tag {
+		font-size: 10px;
 	}
 }
 
