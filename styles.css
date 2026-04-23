@@ -75,40 +75,43 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 12px 28px;
+	padding: 18px 32px;
 	position: sticky;
 	top: 0;
 	z-index: 100;
+	border-bottom: 2px solid rgba(251, 225, 34, 0.18);
 }
 
 .topbar-logo {
 	font-family: var(--font-titulo);
-	font-size: 13px;
-	font-weight: 600;
+	font-size: 15px;
+	font-weight: 700;
 	color: var(--amarillo);
-	letter-spacing: 0.04em;
+	letter-spacing: 0.05em;
 }
 
 .topbar-num {
-	font-size: 12px;
-	color: rgba(255, 255, 255, 0.55);
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.6);
 	font-family: var(--font-titulo);
 }
 
 .btn-menu {
-	background: rgba(251, 225, 34, 0.15);
-	border: 1px solid rgba(251, 225, 34, 0.3);
-	color: var(--amarillo);
+	background: var(--amarillo);
+	border: none;
+	color: var(--verde-oscuro);
 	font-family: var(--font-titulo);
-	font-size: 12px;
-	padding: 6px 14px;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 10px 20px;
 	border-radius: 20px;
 	cursor: pointer;
-	transition: background 0.2s;
+	transition: background 0.2s, transform 0.15s;
 }
 
 .btn-menu:hover {
-	background: rgba(251, 225, 34, 0.25);
+	background: var(--amarillo-oscuro);
+	transform: scale(1.04);
 }
 
 /* ── CONTENIDO CENTRAL ── */
@@ -152,24 +155,26 @@ body {
 }
 
 .btn-prev {
-	background: var(--fondo);
-	color: var(--verde-medio);
-	border: 1.5px solid var(--verde-medio);
+	background: var(--gris);
+	color: var(--blanco);
+	border: 1.5px solid var(--gris);
 }
 
 .btn-prev:hover {
-	background: var(--verde-medio);
-	color: var(--blanco);
+	background: #333333;
+	border-color: #333333;
 }
 
 .btn-next {
-	background: var(--verde-medio);
+	background: var(--gris);
 	color: var(--blanco);
+	border: 1.5px solid var(--gris);
 	animation: pulsoBtn 2s ease-in-out infinite;
 }
 
 .btn-next:hover {
-	background: var(--verde-oscuro);
+	background: #333333;
+	border-color: #333333;
 	animation: none;
 }
 
@@ -387,6 +392,7 @@ body {
 	display: flex;
 	gap: 12px;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .btn-iniciar {
@@ -411,19 +417,20 @@ body {
 }
 
 .btn-menu-portada {
-	background: transparent;
-	color: var(--verde-oscuro);
+	background: var(--gris);
+	color: var(--blanco);
 	font-family: var(--font-titulo);
 	font-size: 14px;
+	font-weight: 600;
 	padding: 14px 24px;
 	border-radius: 30px;
-	border: 1.5px solid var(--verde-oscuro);
+	border: none;
 	cursor: pointer;
 	transition: all 0.2s;
 }
 
 .btn-menu-portada:hover {
-	background: rgba(0, 72, 43, 0.08);
+	background: #242323;
 }
 
 /* ── AVATAR ── */
@@ -1136,6 +1143,11 @@ body {
 	color: white;
 }
 
+.menu-cerrar:hover {
+	background: var(--verde-medio);
+	color: white;
+}
+
 /* ── REA Y POBLACIÓN ── */
 .rea-card {
 	background: var(--verde-oscuro);
@@ -1201,6 +1213,34 @@ body {
 	font-size: 14px;
 	line-height: 1.75;
 	color: var(--gris);
+}
+
+.odc-def-card {
+	background: var(--verde-oscuro);
+	border-radius: var(--radio);
+	padding: 24px;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.odc-def-label {
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--verde-menta);
+	margin-bottom: 10px;
+}
+
+.odc-def-texto {
+	font-size: 14px;
+	line-height: 1.75;
+	color: rgba(255, 255, 255, 0.88);
+}
+
+.odc-def-texto strong {
+	color: var(--amarillo);
 }
 
 /* ── EVALUACIÓN ── */
@@ -1457,6 +1497,7 @@ body {
 	width: 100%;
 	border-radius: var(--radio);
 	box-shadow: var(--sombra);
+	transform: translateZ(0);
 }
 
 .modulo-video-landscape {
@@ -1501,27 +1542,20 @@ body {
 		position: static;
 	}
 
-	/* Orden visual: contenido primero, video después */
-	.m1-layout .m1-video-col { order: 2; }
-	.m1-layout .m1-contenido { order: 1; }
-
 	/* Videos centrados con ancho máximo */
 	.modulo-video {
-		display: block;
 		width: 100%;
 		max-width: 380px;
 		margin: 0 auto;
 	}
 
 	.modulo-video-landscape {
-		display: block;
 		width: 100%;
 		max-width: 500px;
 		margin: 0 auto;
 	}
 
 	.modulo-video-mini {
-		display: block;
 		width: 100%;
 		max-width: 300px;
 		margin: 0 auto;
@@ -1799,6 +1833,54 @@ body {
 
 .enlace-verde {
 	color: var(--verde-medio);
+}
+
+/* ── CITAS CON TOOLTIP ── */
+.cita-link {
+	position: relative;
+	color: var(--verde-menta);
+	text-decoration: underline dotted;
+	text-underline-offset: 3px;
+	cursor: help;
+	font-style: italic;
+	transition: color 0.2s;
+}
+
+.cita-link:hover {
+	color: var(--naranja);
+}
+
+.cita-tooltip {
+	display: none;
+	position: absolute;
+	bottom: calc(100% + 8px);
+	left: 50%;
+	transform: translateX(-50%);
+	background: var(--verde-oscuro);
+	color: white;
+	font-size: 12px;
+	font-style: normal;
+	padding: 10px 14px;
+	border-radius: 10px;
+	width: 300px;
+	line-height: 1.6;
+	z-index: 200;
+	white-space: normal;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+	pointer-events: none;
+}
+
+.cita-link:hover .cita-tooltip {
+	display: block;
+}
+
+@keyframes ref-flash {
+	0%, 100% { background: transparent; }
+	25%, 75% { background: rgba(247, 147, 30, 0.25); border-radius: 6px; }
+}
+
+.ref-highlight {
+	animation: ref-flash 2.5s ease;
 }
 
 /* ── PANTALLA DE CIERRE ── */

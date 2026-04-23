@@ -56,6 +56,17 @@ function reproducirVideoModulo(n) {
   }, 1500);
 }
 
+function irACita(refId) {
+  irA(10);
+  setTimeout(() => {
+    const el = document.getElementById(refId);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.classList.add("ref-highlight");
+    setTimeout(() => el.classList.remove("ref-highlight"), 2500);
+  }, 600);
+}
+
 function detenerVideoModulo(n) {
   clearTimeout(videoTimer);
   videoTimer = null;
@@ -493,3 +504,4 @@ function reproducirAudio(pantalla) {
     );
   });
 }
+
