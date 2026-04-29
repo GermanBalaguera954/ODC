@@ -30,7 +30,7 @@ let pantallaActual = 0;
  * @param {number} n - Índice de la pantalla destino
  */
 function irA(n) {
-  if (n > 2) {
+  if (n > 6) {
     mostrarConstruccion();
     return;
   }
