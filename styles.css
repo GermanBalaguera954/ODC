@@ -1583,8 +1583,8 @@ body {
 	}
 }
 
-/* ── MÓVIL GRANDE (≤ 640px) ── */
-@media (max-width: 640px) {
+/* ── MÓVIL GRANDE (≤ 650px) ── */
+@media (max-width: 650px) {
 	/* Topbar */
 	.topbar {
 		padding: 10px 16px;
