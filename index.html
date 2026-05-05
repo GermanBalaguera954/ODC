@@ -40,69 +40,76 @@
           </div>
         </div>
         <div class="menu-item" onclick="irA(2)">
+          <div class="menu-item-num">M</div>
+          <div>
+            <div class="menu-item-titulo">Metodología PRISMA</div>
+            <div class="menu-item-sub">Base de evidencia científica</div>
+          </div>
+        </div>
+        <div class="menu-item" onclick="irA(3)">
           <div class="menu-item-num">2</div>
           <div>
             <div class="menu-item-titulo">M1 · Contexto y problemática</div>
             <div class="menu-item-sub">La deserción en cifras</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(3)">
+        <div class="menu-item" onclick="irA(4)">
           <div class="menu-item-num">3</div>
           <div>
             <div class="menu-item-titulo">M2 · Deserción en Colombia</div>
             <div class="menu-item-sub">Factores y contexto local</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(4)">
+        <div class="menu-item" onclick="irA(5)">
           <div class="menu-item-num">4</div>
           <div>
             <div class="menu-item-titulo">M3 · Factores de riesgo</div>
             <div class="menu-item-sub">Académicos, económicos, psicosociales</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(5)">
+        <div class="menu-item" onclick="irA(6)">
           <div class="menu-item-num">5</div>
           <div>
             <div class="menu-item-titulo">M4 · IA y machine learning</div>
             <div class="menu-item-sub">Cómo aprenden las máquinas</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(6)">
+        <div class="menu-item" onclick="irA(7)">
           <div class="menu-item-num">6</div>
           <div>
             <div class="menu-item-titulo">M5 · Modelos predictivos</div>
             <div class="menu-item-sub">Evidencia y métricas</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(7)">
+        <div class="menu-item" onclick="irA(8)">
           <div class="menu-item-num">7</div>
           <div>
             <div class="menu-item-titulo">M6 · Implementación y ética</div>
             <div class="menu-item-sub">Uso responsable de la IA</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(8)">
+        <div class="menu-item" onclick="irA(9)">
           <div class="menu-item-num">E</div>
           <div>
             <div class="menu-item-titulo">Evaluación final</div>
             <div class="menu-item-sub">8 preguntas alineadas al REA</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(9)">
+        <div class="menu-item" onclick="irA(10)">
           <div class="menu-item-num">C</div>
           <div>
             <div class="menu-item-titulo">Conclusión</div>
             <div class="menu-item-sub">Síntesis y siguientes pasos</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(10)">
+        <div class="menu-item" onclick="irA(11)">
           <div class="menu-item-num">R</div>
           <div>
             <div class="menu-item-titulo">Referencias</div>
             <div class="menu-item-sub">Fuentes bibliográficas</div>
           </div>
         </div>
-        <div class="menu-item" onclick="irA(11)">
+        <div class="menu-item" onclick="irA(12)">
           <div class="menu-item-num">★</div>
           <div>
             <div class="menu-item-titulo">Créditos y licencia</div>
@@ -121,7 +128,7 @@
   <div class="pantalla activa" id="p0">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 1 / 12</div>
+      <div class="topbar-num">Pantalla 1 / 13</div>
       <button type="button" class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido portada-contenido">
@@ -202,7 +209,7 @@
   <div class="pantalla" id="p1">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 2 / 12</div>
+      <div class="topbar-num">Pantalla 2 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -292,7 +299,145 @@
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p1"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(2)">Módulo 1 →</button>
+      <button class="btn-nav btn-next" onclick="irA(2)">Metodología →</button>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+    P-PRISMA · METODOLOGÍA DE LA REVISIÓN SISTEMÁTICA
+    ══════════════════════════════════════════════════════════ -->
+  <div class="pantalla" id="p-prisma">
+    <div class="topbar">
+      <div class="topbar-logo">ALDO · UCundinamarca</div>
+      <div class="topbar-num">Pantalla 3 / 13</div>
+      <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
+    </div>
+    <div class="contenido">
+
+      <div class="modulo-header">
+        <div class="modulo-tag">Metodología</div>
+        <h2 class="modulo-titulo">Base de evidencia: revisión sistemática PRISMA 2020</h2>
+      </div>
+
+      <div class="prisma-layout">
+
+        <!-- Columna izquierda: pregunta + criterios + línea translocal -->
+        <div class="m1-contenido">
+
+          <div class="rea-card">
+            <div class="rea-label">Pregunta de Investigación</div>
+            <div class="rea-texto">
+              ¿Qué técnicas de inteligencia artificial aplicadas a datos académicos, socioeconómicos y de comportamiento estudiantil de los primeros meses de formación permiten identificar con alta precisión a estudiantes en riesgo de <strong>deserción temprana</strong> en instituciones de educación superior?
+            </div>
+          </div>
+
+          <div class="prisma-criterios">
+            <div class="criterio-bloque criterio-bloque-in">
+              <div class="criterio-titulo">✓ Inclusión</div>
+              <ul class="criterio-lista">
+                <li>Publicados entre 2019 y 2024</li>
+                <li>Modelos predictivos de IA aplicados a deserción universitaria</li>
+                <li>Transferibilidad al contexto colombiano</li>
+                <li>Artículos indexados con texto completo</li>
+                <li>Idioma español o inglés</li>
+              </ul>
+            </div>
+            <div class="criterio-bloque criterio-bloque-ex">
+              <div class="criterio-titulo">✕ Exclusión</div>
+              <ul class="criterio-lista">
+                <li>Deserción en educación básica o media</li>
+                <li>Sin evidencia empírica ni modelado cuantitativo</li>
+                <li>Publicaciones anteriores a 2019</li>
+                <li>Documentos sin revisión de pares</li>
+                <li>Sin métricas de precisión del modelo</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="poblacion-card">
+            <div class="poblacion-label">Línea Translocal de Investigación</div>
+            <div class="poblacion-texto">
+              <strong>Aprendizaje – Conocimiento – Tecnología – Comunicación – Digitalización.</strong>
+              Usar IA para identificar estudiantes en riesgo es, ante todo, una decisión pedagógica: reconoce que el aprendizaje está condicionado por factores que pueden y deben ser atendidos a tiempo <span class="cita-link">(Facultad de Educación UCundinamarca, 2021)<span class="cita-tooltip">Facultad de Educación UCundinamarca. (2021). <em>Línea translocal de investigación: Aprendizaje – Conocimiento – Tecnología – Comunicación – Digitalización</em>. Universidad de Cundinamarca.</span></span>.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Columna derecha: diagrama de flujo PRISMA -->
+        <div class="prisma-diagrama-col">
+
+          <div class="prisma-flow">
+            <div class="prisma-fase">
+              <div class="prisma-fase-titulo">① Identificación</div>
+              <div class="prisma-fase-row">
+                <div class="prisma-caja">
+                  <div class="prisma-num">90</div>
+                  <div class="prisma-desc">registros en Scopus</div>
+                </div>
+                <div class="prisma-caja prisma-caja-ex">
+                  <div class="prisma-num">2</div>
+                  <div class="prisma-desc">duplicados eliminados</div>
+                </div>
+              </div>
+            </div>
+            <div class="prisma-arrow">↓</div>
+            <div class="prisma-fase">
+              <div class="prisma-fase-titulo">② Cribado</div>
+              <div class="prisma-fase-row">
+                <div class="prisma-caja">
+                  <div class="prisma-num">88</div>
+                  <div class="prisma-desc">registros cribados</div>
+                </div>
+                <div class="prisma-caja prisma-caja-ex">
+                  <div class="prisma-num">58</div>
+                  <div class="prisma-desc">excluidos por irrelevancia</div>
+                </div>
+              </div>
+            </div>
+            <div class="prisma-arrow">↓</div>
+            <div class="prisma-fase">
+              <div class="prisma-fase-titulo">③ Elegibilidad</div>
+              <div class="prisma-fase-row">
+                <div class="prisma-caja">
+                  <div class="prisma-num">30</div>
+                  <div class="prisma-desc">artículos evaluados</div>
+                </div>
+                <div class="prisma-caja prisma-caja-ex">
+                  <div class="prisma-num">0</div>
+                  <div class="prisma-desc">excluidos</div>
+                </div>
+              </div>
+            </div>
+            <div class="prisma-arrow">↓</div>
+            <div class="prisma-fase prisma-fase-final">
+              <div class="prisma-fase-titulo">④ Inclusión</div>
+              <div class="prisma-fase-row">
+                <div class="prisma-caja prisma-caja-final">
+                  <div class="prisma-num">30</div>
+                  <div class="prisma-desc">artículos incluidos en la revisión sistemática</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prisma-meta">
+            <div class="prisma-meta-item"><span>Base de datos</span><strong>Scopus</strong></div>
+            <div class="prisma-meta-item"><span>Período</span><strong>2019 – 2024</strong></div>
+            <div class="prisma-meta-item"><span>Protocolo</span><strong>PRISMA 2020</strong></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="nav-bottom">
+      <button class="btn-nav btn-prev" onclick="irA(1)">← Punto de partida</button>
+      <div class="progreso-wrap">
+        <div class="progreso-fill progreso-p-prisma"></div>
+      </div>
+      <button class="btn-nav btn-next" onclick="irA(3)">Módulo 1 →</button>
     </div>
   </div>
 
@@ -303,7 +448,7 @@
   <div class="pantalla" id="p2">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 3 / 12</div>
+      <div class="topbar-num">Pantalla 4 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -419,11 +564,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(1)">← REA</button>
+      <button class="btn-nav btn-prev" onclick="irA(2)">← Metodología</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p2"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(3)">Módulo 2 →</button>
+      <button class="btn-nav btn-next" onclick="irA(4)">Módulo 2 →</button>
     </div>
   </div>
 
@@ -434,7 +579,7 @@
   <div class="pantalla" id="p3">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 4 / 12</div>
+      <div class="topbar-num">Pantalla 5 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -506,11 +651,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(2)">← Módulo 1</button>
+      <button class="btn-nav btn-prev" onclick="irA(3)">← Módulo 1</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p3"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(4)">Módulo 3 →</button>
+      <button class="btn-nav btn-next" onclick="irA(5)">Módulo 3 →</button>
     </div>
   </div>
 
@@ -521,7 +666,7 @@
   <div class="pantalla" id="p4">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 5 / 12</div>
+      <div class="topbar-num">Pantalla 6 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -617,11 +762,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(3)">← Módulo 2</button>
+      <button class="btn-nav btn-prev" onclick="irA(4)">← Módulo 2</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p4"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(5)">Módulo 4 →</button>
+      <button class="btn-nav btn-next" onclick="irA(6)">Módulo 4 →</button>
     </div>
   </div>
 
@@ -632,7 +777,7 @@
   <div class="pantalla" id="p5">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 6 / 12</div>
+      <div class="topbar-num">Pantalla 7 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -735,11 +880,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(4)">← Módulo 3</button>
+      <button class="btn-nav btn-prev" onclick="irA(5)">← Módulo 3</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p5"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(6)">Módulo 5 →</button>
+      <button class="btn-nav btn-next" onclick="irA(7)">Módulo 5 →</button>
     </div>
   </div>
 
@@ -750,7 +895,7 @@
   <div class="pantalla" id="p6">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 7 / 12</div>
+      <div class="topbar-num">Pantalla 8 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -834,11 +979,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(5)">← Módulo 4</button>
+      <button class="btn-nav btn-prev" onclick="irA(6)">← Módulo 4</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p6"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(7)">Módulo 6 →</button>
+      <button class="btn-nav btn-next" onclick="irA(8)">Módulo 6 →</button>
     </div>
   </div>
 
@@ -849,7 +994,7 @@
   <div class="pantalla" id="p7">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 8 / 12</div>
+      <div class="topbar-num">Pantalla 9 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -955,11 +1100,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(6)">← Módulo 5</button>
+      <button class="btn-nav btn-prev" onclick="irA(7)">← Módulo 5</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p7"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(8)">Evaluación →</button>
+      <button class="btn-nav btn-next" onclick="irA(9)">Evaluación →</button>
     </div>
   </div>
 
@@ -970,7 +1115,7 @@
   <div class="pantalla" id="p8">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 9 / 12</div>
+      <div class="topbar-num">Pantalla 10 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -1260,7 +1405,7 @@
             <div class="resultado-final">
               <div class="resultado-score" id="resultado-score"></div>
               <div class="resultado-msg" id="resultado-msg"></div>
-              <button class="btn-iniciar btn-iniciar-centrado" onclick="irA(9)">Ver conclusión →</button>
+              <button class="btn-iniciar btn-iniciar-centrado" onclick="irA(10)">Ver conclusión →</button>
             </div>
           </div>
 
@@ -1270,11 +1415,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(7)">← Módulo 6</button>
+      <button class="btn-nav btn-prev" onclick="irA(8)">← Módulo 6</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p8"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(9)">Conclusión →</button>
+      <button class="btn-nav btn-next" onclick="irA(10)">Conclusión →</button>
     </div>
   </div>
 
@@ -1285,7 +1430,7 @@
   <div class="pantalla" id="p9">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 10 / 12</div>
+      <div class="topbar-num">Pantalla 11 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -1395,11 +1540,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(8)">← Evaluación</button>
+      <button class="btn-nav btn-prev" onclick="irA(9)">← Evaluación</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p9"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(10)">Referencias →</button>
+      <button class="btn-nav btn-next" onclick="irA(11)">Referencias →</button>
     </div>
   </div>
 
@@ -1410,7 +1555,7 @@
   <div class="pantalla" id="p10">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 11 / 12</div>
+      <div class="topbar-num">Pantalla 12 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -1541,11 +1686,11 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(9)">← Conclusión</button>
+      <button class="btn-nav btn-prev" onclick="irA(10)">← Conclusión</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p10"></div>
       </div>
-      <button class="btn-nav btn-next" onclick="irA(11)">Créditos →</button>
+      <button class="btn-nav btn-next" onclick="irA(12)">Créditos →</button>
     </div>
   </div>
 
@@ -1556,7 +1701,7 @@
   <div class="pantalla" id="p11">
     <div class="topbar">
       <div class="topbar-logo">ALDO · UCundinamarca</div>
-      <div class="topbar-num">Pantalla 12 / 12</div>
+      <div class="topbar-num">Pantalla 13 / 13</div>
       <button class="btn-menu" onclick="abrirMenu()">☰ Menú</button>
     </div>
     <div class="contenido">
@@ -1616,7 +1761,7 @@
 
     </div>
     <div class="nav-bottom">
-      <button class="btn-nav btn-prev" onclick="irA(10)">← Referencias</button>
+      <button class="btn-nav btn-prev" onclick="irA(11)">← Referencias</button>
       <div class="progreso-wrap">
         <div class="progreso-fill progreso-p11"></div>
       </div>

@@ -2008,3 +2008,213 @@ body {
 .progreso-p11 {
 	width: 100%;
 }
+
+/* ── PANTALLA PRISMA ── */
+.prisma-layout {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+	align-items: start;
+}
+
+.prisma-diagrama-col {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.prisma-flow {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.prisma-fase {
+	background: var(--blanco);
+	border: 1.5px solid rgba(0, 123, 62, 0.2);
+	border-radius: var(--radio);
+	padding: 14px 16px;
+}
+
+.prisma-fase-final {
+	border-color: var(--verde-oscuro);
+	border-width: 2px;
+}
+
+.prisma-fase-titulo {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--verde-menta);
+	margin-bottom: 10px;
+}
+
+.prisma-fase-row {
+	display: flex;
+	gap: 10px;
+}
+
+.prisma-caja {
+	flex: 1;
+	text-align: center;
+	padding: 10px 8px;
+	background: rgba(0, 123, 62, 0.06);
+	border-radius: 8px;
+}
+
+.prisma-caja-ex {
+	background: rgba(247, 147, 30, 0.08);
+}
+
+.prisma-caja-final {
+	background: var(--verde-oscuro);
+	flex: 1;
+}
+
+.prisma-num {
+	font-family: var(--font-titulo);
+	font-size: 26px;
+	font-weight: 700;
+	color: var(--verde-oscuro);
+	line-height: 1;
+	margin-bottom: 4px;
+}
+
+.prisma-caja-ex .prisma-num {
+	color: var(--naranja);
+}
+
+.prisma-caja-final .prisma-num {
+	color: var(--amarillo);
+}
+
+.prisma-desc {
+	font-size: 11px;
+	color: var(--gris);
+	line-height: 1.4;
+}
+
+.prisma-caja-final .prisma-desc {
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.prisma-arrow {
+	text-align: center;
+	font-size: 18px;
+	color: var(--verde-menta);
+	line-height: 1.4;
+	margin: 2px 0;
+}
+
+.prisma-meta {
+	background: var(--blanco);
+	border: 1px solid rgba(0, 123, 62, 0.15);
+	border-radius: var(--radio);
+	padding: 14px 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.prisma-meta-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 13px;
+}
+
+.prisma-meta-item span {
+	color: #888;
+}
+
+.prisma-meta-item strong {
+	color: var(--verde-oscuro);
+	font-weight: 600;
+}
+
+.prisma-criterios {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	margin-bottom: 16px;
+}
+
+.criterio-bloque {
+	border-radius: var(--radio-sm);
+	padding: 14px;
+}
+
+.criterio-bloque-in {
+	background: rgba(0, 123, 62, 0.06);
+	border: 1px solid rgba(0, 123, 62, 0.2);
+}
+
+.criterio-bloque-ex {
+	background: rgba(247, 147, 30, 0.06);
+	border: 1px solid rgba(247, 147, 30, 0.25);
+}
+
+.criterio-titulo {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+.criterio-bloque-in .criterio-titulo {
+	color: var(--verde-medio);
+}
+
+.criterio-bloque-ex .criterio-titulo {
+	color: var(--naranja);
+}
+
+.criterio-lista {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 0;
+	margin: 0;
+}
+
+.criterio-lista li {
+	font-size: 12px;
+	color: var(--gris);
+	line-height: 1.4;
+	padding-left: 10px;
+	position: relative;
+}
+
+.criterio-lista li::before {
+	content: "·";
+	position: absolute;
+	left: 0;
+	color: var(--verde-menta);
+}
+
+.criterio-bloque-ex .criterio-lista li::before {
+	color: var(--naranja);
+}
+
+.progreso-p-prisma {
+	width: 21%;
+}
+
+@media (max-width: 900px) {
+	.prisma-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.prisma-criterios {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.prisma-criterios {
+		grid-template-columns: 1fr;
+	}
+}

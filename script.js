@@ -12,6 +12,7 @@ Versión: 1.0 | 2025
 const PANTALLAS = [
   "p0",
   "p1",
+  "p-prisma",
   "p2",
   "p3",
   "p4",
@@ -30,7 +31,7 @@ let pantallaActual = 0;
  * @param {number} n - Índice de la pantalla destino
  */
 function irA(n) {
-  if (n > 6) {
+  if (n > 7) {
     mostrarConstruccion();
     return;
   }
@@ -47,7 +48,7 @@ function irA(n) {
 let videoTimer = null;
 
 function reproducirVideoModulo(n) {
-  const videos = { 0: "video-portada", 1: "video-p1", 2: "video-m1", 3: "video-m2", 4: "video-m3", 5: "video-m4", 6: "video-m5", 7: "video-m6", 8: "video-p8", 9: "video-p9" };
+  const videos = { 0: "video-portada", 1: "video-p1", 3: "video-m1", 4: "video-m2", 5: "video-m3", 6: "video-m4", 7: "video-m5", 8: "video-m6", 9: "video-p8", 10: "video-p9" };
   if (!videos[n]) return;
   const video = document.getElementById(videos[n]);
   if (!video) return;
@@ -57,7 +58,7 @@ function reproducirVideoModulo(n) {
 }
 
 function irACita(refId) {
-  irA(10);
+  irA(11);
   setTimeout(() => {
     const el = document.getElementById(refId);
     if (!el) return;
@@ -70,7 +71,7 @@ function irACita(refId) {
 function detenerVideoModulo(n) {
   clearTimeout(videoTimer);
   videoTimer = null;
-  const videos = { 0: "video-portada", 1: "video-p1", 2: "video-m1", 3: "video-m2", 4: "video-m3", 5: "video-m4", 6: "video-m5", 7: "video-m6", 8: "video-p8", 9: "video-p9" };
+  const videos = { 0: "video-portada", 1: "video-p1", 3: "video-m1", 4: "video-m2", 5: "video-m3", 6: "video-m4", 7: "video-m5", 8: "video-m6", 9: "video-p8", 10: "video-p9" };
   if (!videos[n]) return;
   const video = document.getElementById(videos[n]);
   if (!video) return;
