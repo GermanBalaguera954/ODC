@@ -1596,7 +1596,7 @@ body {
 
 	/* Contenido */
 	.contenido {
-		padding: 16px 14px 14px;
+		padding: 16px 14px 20px;
 	}
 
 	/* Portada hero */
@@ -1605,22 +1605,67 @@ body {
 	}
 
 	.portada-subtitulo {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
-	/* Barra de navegación inferior */
+	/* Texto base — más grande para legibilidad en móvil */
+	.card p,
+	.rea-texto,
+	.poblacion-texto,
+	.odc-def-texto,
+	.transcripcion-texto,
+	.actividad-instruccion,
+	.pregunta {
+		font-size: 15px;
+	}
+
+	.checklist li {
+		font-size: 15px;
+		line-height: 1.65;
+	}
+
+	.card-titulo {
+		font-size: 15px;
+	}
+
+	.avatar-texto {
+		font-size: 15px;
+	}
+
+	.opcion-item {
+		font-size: 14px;
+		padding: 12px 14px;
+	}
+
+	/* Videos full-width en móvil */
+	.modulo-video,
+	.modulo-video-landscape,
+	.modulo-video-mini {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	/* Navegación */
 	.nav-bottom {
 		padding: 10px 14px;
 	}
 
 	.btn-nav {
-		font-size: 12px;
-		padding: 8px 16px;
+		font-size: 13px;
+		padding: 10px 16px;
 	}
 
-	/* Stats en dos columnas */
+	/* Stats */
 	.stats-grid {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.stat-num {
+		font-size: 26px;
+	}
+
+	.stat-label {
+		font-size: 12px;
 	}
 
 	/* Drag & drop en columna */
@@ -1646,14 +1691,14 @@ body {
 
 /* ── MÓVIL PEQUEÑO (≤ 420px) ── */
 @media (max-width: 420px) {
-	/* Topbar más compacto */
+	/* Topbar */
 	.topbar-logo {
-		font-size: 11px;
+		font-size: 12px;
 	}
 
 	.btn-menu {
-		font-size: 11px;
-		padding: 5px 10px;
+		font-size: 12px;
+		padding: 6px 12px;
 	}
 
 	/* Portada */
@@ -1672,34 +1717,43 @@ body {
 	}
 
 	.btn-nav {
-		font-size: 11px;
-		padding: 7px 12px;
-		gap: 4px;
+		font-size: 12px;
+		padding: 9px 12px;
 	}
 
-	/* Stats */
+	/* Stats en columna única */
+	.stats-grid {
+		grid-template-columns: 1fr;
+	}
+
 	.stat-num {
-		font-size: 24px;
+		font-size: 30px;
 	}
 
 	.stat-label {
-		font-size: 10px;
+		font-size: 13px;
 	}
 
 	/* Tarjetas */
 	.card {
-		padding: 14px;
+		padding: 16px;
+	}
+
+	.rea-card,
+	.poblacion-card,
+	.odc-def-card {
+		padding: 18px;
 	}
 
 	/* Chips de info */
 	.info-chip {
-		font-size: 11px;
-		padding: 4px 10px 4px 8px;
+		font-size: 12px;
+		padding: 5px 12px 5px 10px;
 	}
 
 	/* Módulo encabezado */
 	.modulo-tag {
-		font-size: 10px;
+		font-size: 11px;
 	}
 }
 
