@@ -1643,12 +1643,14 @@ body {
 		padding: 12px 14px;
 	}
 
-	/* Videos full-width en móvil */
+	/* Videos más compactos en móvil */
 	.modulo-video,
 	.modulo-video-landscape,
 	.modulo-video-mini {
-		width: 100%;
-		max-width: 100%;
+		width: 60%;
+		max-width: 320px;
+		display: block;
+		margin: 0 auto;
 	}
 
 	/* Navegación */
