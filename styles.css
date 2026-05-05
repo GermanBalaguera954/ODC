@@ -1542,6 +1542,12 @@ body {
 		position: static;
 	}
 
+	/* Video siempre primero al apilar en móvil */
+	.m1-layout .m1-video-col,
+	.eval-layout-invertido .eval-video-col {
+		order: -1;
+	}
+
 	/* Videos centrados con ancho máximo */
 	.modulo-video {
 		width: 100%;
