@@ -1766,7 +1766,7 @@ body {
 }
 
 /* ── MODAL EN CONSTRUCCIÓN ── */
-.construccion-panel {
+/* .construccion-panel {
     background: var(--blanco);
     border-radius: var(--radio);
     padding: 40px 32px;
@@ -1794,7 +1794,7 @@ body {
 	color: var(--gris);
 	line-height: 1.6;
 	margin-bottom: 24px;
-}
+} */
 
 /* ── ALDO INTRO CARD (portada) ── */
 .aldo-intro {

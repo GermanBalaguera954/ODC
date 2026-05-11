@@ -72,11 +72,16 @@ function detenerVideoModulo(n) {
   clearTimeout(videoTimer);
   videoTimer = null;
   const videos = { 0: "video-portada", 1: "video-p1", 3: "video-m1", 4: "video-m2", 5: "video-m3", 6: "video-m4", 7: "video-m5", 8: "video-m6", 9: "video-p8", 10: "video-p9" };
-  if (!videos[n]) return;
-  const video = document.getElementById(videos[n]);
-  if (!video) return;
-  video.pause();
-  video.currentTime = 0;
+  if (videos[n]) {
+    const video = document.getElementById(videos[n]);
+    if (video) { video.pause(); video.currentTime = 0; }
+  }
+  // Detener iframe de YouTube si existe en la pantalla actual
+  const pantalla = document.getElementById(PANTALLAS[n]);
+  if (pantalla) {
+    const iframe = pantalla.querySelector("iframe.yt-frame");
+    if (iframe) { iframe.src = iframe.src; }
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => reproducirVideoModulo(0));
