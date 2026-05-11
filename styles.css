@@ -2099,6 +2099,21 @@ body {
 	color: rgba(255, 255, 255, 0.85);
 }
 
+.prisma-ex-detalle {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	margin-top: 6px;
+	border-top: 1px solid rgba(247, 147, 30, 0.25);
+	padding-top: 5px;
+}
+
+.prisma-ex-detalle span {
+	font-size: 10px;
+	color: var(--naranja);
+	line-height: 1.3;
+}
+
 .prisma-arrow {
 	text-align: center;
 	font-size: 18px;
@@ -2217,4 +2232,64 @@ body {
 	.prisma-criterios {
 		grid-template-columns: 1fr;
 	}
+}
+
+/* ── Caso aplicado Colombia (M6) ─────────────────────── */
+.caso-col-card {
+	border-left: 3px solid var(--verde-oscuro);
+}
+
+.caso-col-pasos {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 14px;
+}
+
+.caso-paso {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	font-size: 13px;
+	color: var(--gris);
+	line-height: 1.4;
+}
+
+.caso-paso-num {
+	flex-shrink: 0;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: var(--verde-oscuro);
+	color: #fff;
+	font-size: 11px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ── YouTube embed (M6) ─────────────────────────────── */
+.yt-wrap {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+	border-radius: var(--radio-sm);
+	overflow: hidden;
+	margin-bottom: 8px;
+}
+
+.yt-frame {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+.yt-caption {
+	font-size: 11px;
+	color: #999;
+	margin: 0;
+	line-height: 1.4;
 }

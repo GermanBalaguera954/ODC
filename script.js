@@ -31,10 +31,10 @@ let pantallaActual = 0;
  * @param {number} n - Índice de la pantalla destino
  */
 function irA(n) {
-  if (n > 7) {
-    mostrarConstruccion();
-    return;
-  }
+  // if (n > 8) {
+  //   mostrarConstruccion();
+  //   return;
+  // }
   detenerVideoModulo(pantallaActual);
   document.getElementById(PANTALLAS[pantallaActual]).classList.remove("activa");
   pantallaActual = n;
