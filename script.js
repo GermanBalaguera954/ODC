@@ -502,7 +502,6 @@ function reproducirAudio(pantalla) {
   audioActual = new Audio(src);
 
   audioActual.play().catch(() => {
-    // Si no encuentra el archivo, mostrar mensaje informativo
     console.info(
       "Audio no encontrado: " +
       src +
@@ -510,4 +509,84 @@ function reproducirAudio(pantalla) {
     );
   });
 }
+
+
+/* ════════════════════════════════════════════════════════════
+   MODAL PREGUNTA DE INVESTIGACIÓN
+   ════════════════════════════════════════════════════════════ */
+function mostrarPregunta() {
+  document.getElementById('preguntaModal').classList.add('activo');
+}
+
+function cerrarPregunta() {
+  document.getElementById('preguntaModal').classList.remove('activo');
+  detenerLectura();
+}
+
+function leerPregunta() {
+  if (!('speechSynthesis' in window)) return;
+
+  const btn = document.getElementById('btnLeer');
+
+  // Si ya está leyendo, detener
+  if (window.speechSynthesis.speaking) {
+    detenerLectura();
+    return;
+  }
+
+  const texto = document.getElementById('preguntaTexto').innerText;
+  const utterance = new SpeechSynthesisUtterance(texto);
+  utterance.lang = 'es-CO';
+  utterance.rate = 0.88;
+  utterance.pitch = 1.05;
+
+  // Preferir voz en español si está disponible
+  const voces = window.speechSynthesis.getVoices();
+  const vozES = voces.find(v => v.lang.startsWith('es')) || null;
+  if (vozES) utterance.voice = vozES;
+
+  utterance.onstart = () => {
+    btn.textContent = '⏹ Detener';
+    btn.classList.add('leyendo');
+  };
+  utterance.onend = utterance.onerror = () => {
+    btn.textContent = '🔊 Escuchar';
+    btn.classList.remove('leyendo');
+  };
+
+  window.speechSynthesis.speak(utterance);
+}
+
+function detenerLectura() {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+  const btn = document.getElementById('btnLeer');
+  if (btn) {
+    btn.textContent = '🔊 Escuchar';
+    btn.classList.remove('leyendo');
+  }
+}
+
+/* ════════════════════════════════════════════════════════════
+   OCULTAR TOOLTIPS AL HACER SCROLL (móvil)
+   ════════════════════════════════════════════════════════════ */
+(function () {
+  let scrollTimer = null;
+
+  window.addEventListener('scroll', function () {
+    document.body.classList.add('tooltips-ocultos');
+    clearTimeout(scrollTimer);
+  }, { passive: true });
+
+  document.addEventListener('touchstart', function () {
+    document.body.classList.remove('tooltips-ocultos');
+  }, { passive: true });
+
+  document.addEventListener('mousemove', function () {
+    document.body.classList.remove('tooltips-ocultos');
+  }, { passive: true });
+}());
+
+
 

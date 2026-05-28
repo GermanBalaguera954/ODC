@@ -735,6 +735,8 @@ body {
 	line-height: 1.5;
 	z-index: 50;
 	white-space: normal;
+	word-break: break-word;
+	overflow-wrap: break-word;
 }
 
 .info-chip:hover .chip-tooltip {
@@ -1695,6 +1697,7 @@ body {
 		flex-wrap: wrap;
 		gap: 6px;
 	}
+
 }
 
 /* ── MÓVIL PEQUEÑO (≤ 420px) ── */
@@ -1928,6 +1931,8 @@ body {
 	line-height: 1.6;
 	z-index: 200;
 	white-space: normal;
+	word-break: break-word;
+	overflow-wrap: break-word;
 	box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 	pointer-events: none;
 }
@@ -2292,4 +2297,149 @@ body {
 	color: #999;
 	margin: 0;
 	line-height: 1.4;
+}
+
+/* ── BOTÓN Y MODAL PREGUNTA DE INVESTIGACIÓN ── */
+.pregunta-inv-btn {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	background: var(--verde-oscuro);
+	color: white;
+	border: none;
+	border-radius: var(--radio);
+	padding: 16px 20px;
+	cursor: pointer;
+	font-family: var(--font-titulo);
+	font-size: 15px;
+	font-weight: 600;
+	width: 100%;
+	margin-bottom: 16px;
+	transition: background 0.2s;
+	text-align: left;
+}
+
+.pregunta-inv-btn:hover {
+	background: var(--verde-medio);
+}
+
+.pregunta-inv-icono {
+	background: rgba(255,255,255,0.2);
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 14px;
+	flex-shrink: 0;
+}
+
+.pregunta-inv-texto {
+	flex: 1;
+}
+
+.pregunta-inv-flecha {
+	opacity: 0.7;
+	font-size: 18px;
+}
+
+.pregunta-inv-hint {
+	font-size: 12px;
+	color: var(--verde-menta);
+	margin: -8px 0 12px 4px;
+	opacity: 0.85;
+}
+
+.pregunta-overlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 48, 28, 0.55);
+	z-index: 600;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+}
+
+.pregunta-overlay.activo {
+	display: flex;
+}
+
+.pregunta-panel {
+	background: var(--blanco);
+	border-radius: var(--radio);
+	padding: 32px;
+	max-width: 560px;
+	width: 100%;
+	box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+	animation: fadeIn 0.25s ease;
+}
+
+.pregunta-panel-label {
+	font-family: var(--font-titulo);
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--verde-menta);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	margin-bottom: 14px;
+}
+
+.pregunta-panel-texto {
+	font-size: 15px;
+	line-height: 1.8;
+	color: var(--verde-oscuro);
+	margin-bottom: 20px;
+}
+
+.pregunta-panel-acciones {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.btn-leer-pregunta {
+	background: var(--verde-menta);
+	color: white;
+	border: none;
+	border-radius: 24px;
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s, transform 0.15s;
+}
+
+.btn-leer-pregunta:hover {
+	background: var(--verde-oscuro);
+}
+
+.btn-leer-pregunta.leyendo {
+	background: var(--naranja);
+	animation: chip-pulse 1.2s ease-out infinite;
+}
+
+/* Ocultar tooltips al hacer scroll (clase añadida por JS) */
+.tooltips-ocultos .cita-tooltip,
+.tooltips-ocultos .chip-tooltip {
+	display: none !important;
+}
+
+/* ── TOOLTIPS CENTRADOS EN MÓVIL ── */
+/* Al final para superar la cascada de las reglas base */
+@media (max-width: 650px) {
+	.cita-tooltip,
+	.chip-tooltip {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		bottom: auto;
+		transform: translate(-50%, -50%);
+		width: calc(100vw - 32px);
+		max-width: 320px;
+		z-index: 9999;
+	}
 }
