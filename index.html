@@ -889,26 +889,26 @@
 
           <div class="actividad-box">
             <div class="actividad-titulo">Actividad · Selección múltiple</div>
-            <div class="pregunta">¿Cuál es el objetivo principal de aplicar machine learning a la deserción
-              universitaria?</div>
+            <p class="actividad-instruccion">Selecciona todas las respuestas correctas.</p>
+            <div class="pregunta">¿Cuáles de los siguientes son objetivos del machine learning aplicado a la deserción universitaria?</div>
             <ul class="opciones-lista" id="opciones-m4">
-              <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'a')">
-                <div class="opcion-letra">A</div>Reemplazar a los docentes en el proceso de evaluación
+              <li class="opcion-item" onclick="toggleOpcionMulti('m4',this,'a')">
+                <div class="opcion-letra">A</div>Identificar estudiantes en riesgo de forma temprana
               </li>
-              <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'b')">
-                <div class="opcion-letra">B</div>Identificar estudiantes en riesgo para intervenir a tiempo
+              <li class="opcion-item" onclick="toggleOpcionMulti('m4',this,'b')">
+                <div class="opcion-letra">B</div>Reemplazar al docente en las decisiones de evaluación
               </li>
-              <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'c')">
-                <div class="opcion-letra">C</div>Automatizar la matrícula de los estudiantes
+              <li class="opcion-item" onclick="toggleOpcionMulti('m4',this,'c')">
+                <div class="opcion-letra">C</div>Generar alertas para que orientadores actúen a tiempo
               </li>
-              <li class="opcion-item" onclick="seleccionarOpcion('m4',this,'d')">
-                <div class="opcion-letra">D</div>Eliminar los factores socioeconómicos del rendimiento
+              <li class="opcion-item" onclick="toggleOpcionMulti('m4',this,'d')">
+                <div class="opcion-letra">D</div>Automatizar el proceso de matrícula universitaria
               </li>
             </ul>
             <button type="button" class="btn-verificar"
-              onclick="verificarSM('m4','b',
-              'El machine learning en educación es una herramienta de apoyo a la decisión humana. Su objetivo es detectar señales de riesgo temprano para facilitar intervenciones oportunas y personalizadas.',
-              'El modelo no toma decisiones por las personas, sino que genera alertas para que docentes y orientadores actúen de manera oportuna. No reemplaza ningún proceso humano.')">Verificar</button>
+              onclick="verificarMulti('m4',['a','c'],
+              'Correcto. El machine learning detecta señales de riesgo temprano (A) y genera alertas para que orientadores actúen oportunamente (C), sin reemplazar ningún proceso humano.',
+              'Recuerda que el machine learning apoya la decisión humana: detecta estudiantes en riesgo y genera alertas para intervención oportuna. No reemplaza docentes ni automatiza la matrícula.')">Verificar</button>
             <div class="retro" id="retro-m4"></div>
           </div>
         </div>
@@ -1230,21 +1230,21 @@
 
           <!-- Indicador de progreso de la evaluación -->
           <div class="eval-progress" id="eval-progress">
-            <div class="eval-step activo" id="es1">1</div>
+            <div class="eval-step activo" id="es1" onclick="evalNavegar(1)" title="Pregunta 1">1</div>
             <div class="eval-linea"></div>
-            <div class="eval-step" id="es2">2</div>
+            <div class="eval-step" id="es2" onclick="evalNavegar(2)" title="Pregunta 2">2</div>
             <div class="eval-linea"></div>
-            <div class="eval-step" id="es3">3</div>
+            <div class="eval-step" id="es3" onclick="evalNavegar(3)" title="Pregunta 3">3</div>
             <div class="eval-linea"></div>
-            <div class="eval-step" id="es4">4</div>
+            <div class="eval-step" id="es4" onclick="evalNavegar(4)" title="Pregunta 4">4</div>
             <div class="eval-linea"></div>
-            <div class="eval-step" id="es5">5</div>
+            <div class="eval-step" id="es5" onclick="evalNavegar(5)" title="Pregunta 5">5</div>
             <div class="eval-linea"></div>
-            <div class="eval-step" id="es6">6</div>
+            <div class="eval-step" id="es6" onclick="evalNavegar(6)" title="Pregunta 6">6</div>
             <div class="eval-linea"></div>
-            <div class="eval-step" id="es7">7</div>
+            <div class="eval-step" id="es7" onclick="evalNavegar(7)" title="Pregunta 7">7</div>
             <div class="eval-linea"></div>
-            <div class="eval-step" id="es8">8</div>
+            <div class="eval-step" id="es8" onclick="evalNavegar(8)" title="Pregunta 8">8</div>
           </div>
 
           <!-- Pregunta 1 -->
@@ -1272,6 +1272,10 @@
           'Correcto. El 24,15% es la deserción acumulada por cohorte. El 8,97% es la tasa anual, un dato diferente.',
           'La tasa de deserción acumulada por cohorte fue 24,15%, equivalente a que 1 de cada 4 estudiantes no culmina sus estudios.')">Verificar</button>
               <div class="retro" id="retro-eq1"></div>
+              <div class="eval-nav-btns" id="eval-nav-1" style="display:none">
+                <span></span>
+                <button class="btn-nav-eval" onclick="evalNavegar(2)">Siguiente →</button>
+              </div>
             </div>
           </div>
 
@@ -1300,6 +1304,10 @@
           'Correcto. El rendimiento en el primer semestre es el predictor más fuerte de deserción futura según Acero et al. (2019).',
           'El primer semestre es la etapa más crítica. Las dificultades académicas tempranas predicen fuertemente el abandono posterior.')">Verificar</button>
               <div class="retro" id="retro-eq2"></div>
+              <div class="eval-nav-btns" id="eval-nav-2" style="display:none">
+                <button class="btn-nav-eval btn-nav-prev" onclick="evalNavegar(1)">← Anterior</button>
+                <button class="btn-nav-eval" onclick="evalNavegar(3)">Siguiente →</button>
+              </div>
             </div>
           </div>
 
@@ -1329,6 +1337,10 @@
           'Perfecto. Académicos (notas, asistencia), socioeconómicos (estrato, trabajo) y psicosociales (apoyo familiar, motivación) son las tres grandes categorías.',
           'Las tres categorías son: académicos, socioeconómicos y psicosociales. Un modelo efectivo debe incluir variables de las tres para ser preciso.')">Verificar</button>
               <div class="retro" id="retro-eq3"></div>
+              <div class="eval-nav-btns" id="eval-nav-3" style="display:none">
+                <button class="btn-nav-eval btn-nav-prev" onclick="evalNavegar(2)">← Anterior</button>
+                <button class="btn-nav-eval" onclick="evalNavegar(4)">Siguiente →</button>
+              </div>
             </div>
           </div>
 
@@ -1356,6 +1368,10 @@
           'Correcto. AUC de 0,5 equivale a predecir al azar, como lanzar una moneda. AUC de 1,0 sería perfecto y 0,97 es casi perfecto.',
           'AUC de 0,5 significa que el modelo no discrimina mejor que el azar. El rango útil está entre 0,7 y 1,0.')">Verificar</button>
               <div class="retro" id="retro-eq4"></div>
+              <div class="eval-nav-btns" id="eval-nav-4" style="display:none">
+                <button class="btn-nav-eval btn-nav-prev" onclick="evalNavegar(3)">← Anterior</button>
+                <button class="btn-nav-eval" onclick="evalNavegar(5)">Siguiente →</button>
+              </div>
             </div>
           </div>
 
@@ -1384,6 +1400,10 @@
           'Excelente. El modelo de ensamble de dos capas de Niyogisubizo et al. (2022) alcanzó AUC superior a 0,97.',
           'El valor correcto es superior a 0,97, reportado por Niyogisubizo et al. (2022) usando un modelo de ensamble de dos capas.')">Verificar</button>
               <div class="retro" id="retro-eq5"></div>
+              <div class="eval-nav-btns" id="eval-nav-5" style="display:none">
+                <button class="btn-nav-eval btn-nav-prev" onclick="evalNavegar(4)">← Anterior</button>
+                <button class="btn-nav-eval" onclick="evalNavegar(6)">Siguiente →</button>
+              </div>
             </div>
           </div>
 
@@ -1411,6 +1431,10 @@
           'Correcto. Quincho Apumayta et al. (2024) confirman en su revisión sistemática que los factores psicosociales y familiares son determinantes críticos en contextos de países en desarrollo.',
           'Los factores psicosociales y familiares son los determinantes críticos según Quincho Apumayta et al. (2024), especialmente en poblaciones vulnerables.')">Verificar</button>
               <div class="retro" id="retro-eq6"></div>
+              <div class="eval-nav-btns" id="eval-nav-6" style="display:none">
+                <button class="btn-nav-eval btn-nav-prev" onclick="evalNavegar(5)">← Anterior</button>
+                <button class="btn-nav-eval" onclick="evalNavegar(7)">Siguiente →</button>
+              </div>
             </div>
           </div>
 
@@ -1439,6 +1463,10 @@
           'Exacto. Sin protocolo humano, el sistema puede estigmatizar al estudiante, vulnerar su privacidad y generar efectos contrarios al objetivo de retención.',
           'El riesgo principal es la estigmatización y vulneración de privacidad. La IA debe apoyar decisiones humanas, no reemplazarlas ni actuar automáticamente sobre las personas.')">Verificar</button>
               <div class="retro" id="retro-eq7"></div>
+              <div class="eval-nav-btns" id="eval-nav-7" style="display:none">
+                <button class="btn-nav-eval btn-nav-prev" onclick="evalNavegar(6)">← Anterior</button>
+                <button class="btn-nav-eval" onclick="evalNavegar(8)">Siguiente →</button>
+              </div>
             </div>
           </div>
 
@@ -1469,6 +1497,10 @@
           'Perfecto. La IA es una herramienta de apoyo: detecta señales de riesgo y genera alertas para que los equipos humanos actúen de manera oportuna y personalizada.',
           'La IA genera alertas tempranas que facilitan intervenciones humanas. No reemplaza el juicio profesional ni garantiza resultados por sí sola.')">Verificar</button>
               <div class="retro" id="retro-eq8"></div>
+              <div class="eval-nav-btns" id="eval-nav-8" style="display:none">
+                <button class="btn-nav-eval btn-nav-prev" onclick="evalNavegar(7)">← Anterior</button>
+                <button class="btn-nav-eval btn-nav-resultado" onclick="mostrarResultadoFinal()">Ver resultado →</button>
+              </div>
             </div>
           </div>
 

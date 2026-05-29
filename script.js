@@ -212,6 +212,50 @@ function verificarSM(grupo, correcta, retroOk, retroMal) {
 }
 
 /* ════════════════════════════════════════════════════════════
+  4b. ACTIVIDAD — SELECCIÓN MÚLTIPLE (varias respuestas correctas)
+  ════════════════════════════════════════════════════════════ */
+
+const seleccionesMulti = {};
+
+function toggleOpcionMulti(grupo, elem, letra) {
+  if (!seleccionesMulti[grupo]) seleccionesMulti[grupo] = new Set();
+  if (elem.classList.contains("seleccionada")) {
+    elem.classList.remove("seleccionada");
+    seleccionesMulti[grupo].delete(letra);
+  } else {
+    elem.classList.add("seleccionada");
+    seleccionesMulti[grupo].add(letra);
+  }
+}
+
+function verificarMulti(grupo, correctas, retroOk, retroMal) {
+  const sel = seleccionesMulti[grupo];
+  if (!sel || sel.size === 0) return;
+
+  const retro = document.getElementById("retro-" + grupo);
+  const items = document.querySelectorAll("#opciones-" + grupo + " .opcion-item");
+  const correctasSet = new Set(correctas);
+
+  let esCorrecta = sel.size === correctasSet.size;
+  if (esCorrecta) {
+    for (const c of correctasSet) {
+      if (!sel.has(c)) { esCorrecta = false; break; }
+    }
+  }
+
+  items.forEach((i) => {
+    i.style.pointerEvents = "none";
+    const letra = i.querySelector(".opcion-letra").textContent.toLowerCase();
+    if (correctasSet.has(letra)) i.classList.add("correcto");
+    else if (sel.has(letra)) i.classList.add("incorrecto");
+  });
+
+  retro.classList.add("visible");
+  retro.className = "retro visible " + (esCorrecta ? "ok" : "mal");
+  retro.textContent = esCorrecta ? "✓ " + retroOk : "✗ " + retroMal;
+}
+
+/* ════════════════════════════════════════════════════════════
   5. ACTIVIDAD — COMPLETAR LA FRASE (Módulo 5)
   ════════════════════════════════════════════════════════════ */
 
@@ -380,8 +424,21 @@ function verificarFactores() {
 let evalActual = 1;
 let evalCorrectas = 0;
 
-// Registro de si ya se procesó cada pregunta (evita doble conteo)
 const evalProcesada = {};
+
+function evalNavegar(num) {
+  const currentBox = document.getElementById("eq" + evalActual);
+  if (currentBox) currentBox.classList.remove("activa");
+  const currentStep = document.getElementById("es" + evalActual);
+  if (currentStep) currentStep.classList.remove("activo");
+
+  evalActual = num;
+  document.getElementById("eq" + evalActual).classList.add("activa");
+  const targetStep = document.getElementById("es" + evalActual);
+  if (targetStep && !targetStep.classList.contains("resuelto")) {
+    targetStep.classList.add("activo");
+  }
+}
 
 // Respuestas correctas de la evaluación
 const EVAL_CORRECTAS = {
@@ -438,24 +495,18 @@ function evalVerificar(num, correcta, retroOk, retroMal) {
   step.classList.add("resuelto");
   step.textContent = esCorrecta ? "✓" : "✗";
 
-  // Avanzar a la siguiente pregunta después de 2 segundos
-  setTimeout(() => {
-    document.getElementById("eq" + num).classList.remove("activa");
-
-    if (num < 8) {
-      evalActual = num + 1;
-      document.getElementById("eq" + evalActual).classList.add("activa");
-      document.getElementById("es" + evalActual).classList.add("activo");
-    } else {
-      mostrarResultadoFinal();
-    }
-  }, 2000);
+  // Mostrar botones de navegación de la pregunta
+  document.getElementById("eval-nav-" + num).style.display = "flex";
 }
 
 /**
  * Muestra el resultado final de la evaluación.
  */
 function mostrarResultadoFinal() {
+  const currentBox = document.getElementById("eq" + evalActual);
+  if (currentBox) currentBox.classList.remove("activa");
+  const currentStep = document.getElementById("es" + evalActual);
+  if (currentStep) currentStep.classList.remove("activo");
   document.getElementById("eq-resultado").classList.add("activa");
 
   const score = document.getElementById("resultado-score");

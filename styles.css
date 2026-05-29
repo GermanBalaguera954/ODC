@@ -1289,6 +1289,46 @@ body {
 	color: #aaa;
 	font-family: var(--font-titulo);
 	transition: all 0.3s;
+	cursor: pointer;
+}
+
+.eval-step:hover {
+	border-color: var(--verde-medio);
+	color: var(--verde-medio);
+}
+
+.eval-nav-btns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 14px;
+	gap: 10px;
+}
+
+.btn-nav-eval {
+	padding: 8px 18px;
+	border: 1.5px solid var(--verde-medio);
+	border-radius: 6px;
+	background: transparent;
+	color: var(--verde-medio);
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+}
+
+.btn-nav-eval:hover {
+	background: var(--verde-medio);
+	color: #fff;
+}
+
+.btn-nav-eval.btn-nav-resultado {
+	background: var(--verde-medio);
+	color: #fff;
+}
+
+.btn-nav-eval.btn-nav-resultado:hover {
+	background: var(--verde-oscuro, #005a2a);
 }
 
 .eval-step.activo {
