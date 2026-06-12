@@ -566,6 +566,7 @@ function reproducirAudio(pantalla) {
    MODAL PREGUNTA DE INVESTIGACIÓN
    ════════════════════════════════════════════════════════════ */
 function mostrarPregunta() {
+  prepararSintesisVoz();
   document.getElementById('preguntaModal').classList.add('activo');
 }
 
@@ -574,10 +575,31 @@ function cerrarPregunta() {
   detenerLectura();
 }
 
-function leerPregunta() {
+let vocesDisponibles = [];
+
+function prepararSintesisVoz() {
+  if (!('speechSynthesis' in window)) return;
+
+  const voces = window.speechSynthesis.getVoices();
+  if (voces.length > 0) {
+    vocesDisponibles = voces;
+  }
+}
+
+if ('speechSynthesis' in window) {
+  document.addEventListener('DOMContentLoaded', prepararSintesisVoz);
+  if (typeof window.speechSynthesis.addEventListener === 'function') {
+    window.speechSynthesis.addEventListener('voiceschanged', prepararSintesisVoz);
+  } else {
+    window.speechSynthesis.onvoiceschanged = prepararSintesisVoz;
+  }
+}
+
+function leerPregunta(intento = 0) {
   if (!('speechSynthesis' in window)) return;
 
   const btn = document.getElementById('btnLeer');
+  if (!btn) return;
 
   // Si ya está leyendo, detener
   if (window.speechSynthesis.speaking) {
@@ -591,20 +613,41 @@ function leerPregunta() {
   utterance.rate = 0.88;
   utterance.pitch = 1.05;
 
-  // Preferir voz en español si está disponible
-  const voces = window.speechSynthesis.getVoices();
-  const vozES = voces.find(v => v.lang.startsWith('es')) || null;
+  prepararSintesisVoz();
+  const voces = vocesDisponibles;
+
+  // En algunos navegadores las voces tardan en estar listas al primer clic.
+  if (voces.length === 0 && intento < 4) {
+    btn.textContent = '⏳ Preparando audio...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.textContent = '🔊 Escuchar';
+      leerPregunta(intento + 1);
+    }, 220);
+    return;
+  }
+
+  // Preferir voz en español colombiano; si no, usar cualquier voz en español.
+  const vozES =
+    voces.find(v => v.lang.toLowerCase().startsWith('es-co')) ||
+    voces.find(v => v.lang.toLowerCase().startsWith('es')) ||
+    null;
   if (vozES) utterance.voice = vozES;
 
   utterance.onstart = () => {
+    btn.disabled = false;
     btn.textContent = '⏹ Detener';
     btn.classList.add('leyendo');
   };
   utterance.onend = utterance.onerror = () => {
+    btn.disabled = false;
     btn.textContent = '🔊 Escuchar';
     btn.classList.remove('leyendo');
   };
 
+  // Limpiar cola previa evita estados bloqueados en algunos navegadores móviles.
+  window.speechSynthesis.cancel();
   window.speechSynthesis.speak(utterance);
 }
 
@@ -614,6 +657,7 @@ function detenerLectura() {
   }
   const btn = document.getElementById('btnLeer');
   if (btn) {
+    btn.disabled = false;
     btn.textContent = '🔊 Escuchar';
     btn.classList.remove('leyendo');
   }
